@@ -1,69 +1,120 @@
-import MatrixRain from './MatrixRain'
+import { useState, useEffect, useRef, useCallback } from 'react';
+import MatrixRain from './MatrixRain';
+import { FiArrowUp } from 'react-icons/fi';
+import styles from './styles/App.module.css';
+
+// Import components
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import Hero from './components/sections/Hero';
+import About from './components/sections/About';
+import Skills from './components/sections/Skills';
+import Contact from './components/sections/Contact';
+
+// Smooth scroll to section
+const scrollToSection = (id) => {
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 
 function App() {
+  const [activeSection, setActiveSection] = useState('home');
+  const [isScrolled, setIsScrolled] = useState(false);
+  const sections = useRef([]);
+
+  // Handle scroll events
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+      
+      // Update active section based on scroll position
+      const scrollPosition = window.scrollY + 100;
+      
+      sections.current.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          setActiveSection(section.id);
+        }
+      });
+    };
+
+    // Initialize sections
+    sections.current = document.querySelectorAll('section');
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+    
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Handle navigation click
+  const handleNavClick = useCallback((section) => {
+    scrollToSection(section);
+    setActiveSection(section);
+  }, []);
+
+  // Handle contact button click in Hero
+  const handleContactClick = useCallback(() => {
+    handleNavClick('contact');
+  }, [handleNavClick]);
+
+  // Scroll to top function
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, []);
+
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-gray-300 flex items-center justify-center p-8">
-      <MatrixRain />
-      <div className="max-w-2xl w-full relative z-10 bg-purple-950/40 backdrop-blur-md rounded-2xl p-8 border border-purple-900/50">
-        {/* Profile Section */}
-        <div className="flex items-center gap-6 mb-8">
-          <img 
-            src="/cat.jpeg" 
-            alt="itarqos" 
-            className="w-24 h-24 rounded-full object-cover border-2 border-gray-700"
-          />
-          <div>
-            <h1 className="text-3xl font-bold text-white mb-1">itarqos</h1>
-            <p className="text-gray-400">Developer</p>
-          </div>
-        </div>
-
-        {/* Bio */}
-        <div className="mb-8">
-          <p className="text-lg leading-relaxed">
-            Hi, I'm <span className="text-white font-semibold">itarqos</span> and I make Minecraft plugins and websites. 
-            Welcome to my little corner on the internet.
-          </p>
-        </div>
-
-        {/* Services */}
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold text-white mb-3">What I Do</h2>
-          <ul className="space-y-2 text-gray-400">
-            <li>Minecraft Plugin Development</li>
-            <li>Website Development</li>
-          </ul>
-        </div>
-
-        {/* Links */}
-        <div className="space-y-2">
-          <a 
-            href="https://discord.gg/yfZtpTBCEG" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-purple-400 hover:text-purple-300 transition-colors underline decoration-dotted underline-offset-4"
-          >
-            commissions (discord server)
-          </a>
-          <a 
-            href="https://discord.com/users/1184539864360816772" 
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block text-purple-400 hover:text-purple-300 transition-colors underline decoration-dotted underline-offset-4"
-          >
-            discord profile
-          </a>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-12 pt-6 border-t border-gray-800">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} itarqos
-          </p>
-        </div>
+    <div className={styles.app}>
+      {/* Animated Background */}
+      <div className={styles.background}>
+        <MatrixRain />
       </div>
+      
+      {/* Header */}
+      <Header 
+        activeSection={activeSection} 
+        onNavClick={handleNavClick} 
+        isScrolled={isScrolled} 
+      />
+      
+      {/* Main Content */}
+      <main className={styles.main}>
+        {/* Hero Section */}
+        <Hero 
+          onContactClick={handleContactClick}
+          onAboutClick={() => handleNavClick('about')}
+        />
+        
+        {/* About Section */}
+        <About />
+        
+        {/* Skills Section */}
+        <Skills />
+        
+        {/* Contact Section */}
+        <Contact />
+      </main>
+      
+      {/* Footer */}
+      <Footer onHomeClick={() => handleNavClick('home')} />
+      
+      {/* Scroll to Top Button */}
+      <button 
+        onClick={scrollToTop}
+        className={`${styles.scrollToTop} ${!isScrolled ? styles.scrollToTopHidden : ''}`}
+        aria-label="Scroll to top"
+      >
+        <FiArrowUp size={20} />
+      </button>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

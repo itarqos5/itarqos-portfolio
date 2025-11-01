@@ -1,0 +1,62 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--bg-darker);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.scrollToTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--primary);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.scrollToTop:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(139, 92, 246, 0.4);
+}
+
+.scrollToTopHidden {
+  opacity: 0;
+  transform: translateY(1rem);
+  pointer-events: none;
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .scrollToTop {
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
