@@ -1,24 +1,58 @@
-/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 :root {
-  --primary: #8b5cf6;
-  --primary-dark: #7c3aed;
-  --primary-light: #a78bfa;
-  --secondary: #ec4899;
-  --secondary-dark: #db2777;
-  --secondary-light: #f472b6;
-  --bg-dark: #0f172a;
-  --bg-darker: #0b1120;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --border-color: #1e293b;
-  --card-bg: rgba(15, 23, 42, 0.8);
-  --card-border: rgba(30, 41, 59, 0.5);
+  --primary: #c084fc;
+  --primary-dark: #9333ea;
+  --primary-glow: rgba(192, 132, 252, 0.2);
+  --secondary: #fb7185;
+  --bg-dark: #020617;
+  --bg-card: rgba(15, 23, 42, 0.4);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --glass-blur: blur(12px);
+  --card-radius: 24px;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  overflow: hidden;
+  /* Enforce single container view */
+  height: 100vh;
+  width: 100vw;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-card);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 html {
@@ -114,8 +148,15 @@ button {
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fade-in {
@@ -127,11 +168,11 @@ button {
   .section {
     padding: 3rem 0;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .section-subtitle {
     font-size: 1.1rem;
     padding: 0 1rem;

@@ -1,33 +1,44 @@
+import { motion } from 'framer-motion';
 import styles from '../../styles/Hero.module.css';
 
-export default function Hero({ onContactClick, onAboutClick }) {
+export default function Hero() {
   return (
-    <section id="home" className={styles.hero}>
-      <div className={styles.container}>
-        <div className={styles.tagline}>
-          Welcome to my portfolio
-        </div>
-        <h1 className={styles.title}>
-          Hi, I'm <span className={styles.highlight}>itarqos</span>
-        </h1>
-        <p className={styles.subtitle}>
-          I craft exceptional digital experiences with code and creativity.
-        </p>
-        <div className={styles.buttons}>
-          <button
-            onClick={onContactClick}
-            className={`${styles.button} ${styles.primaryButton}`}
-          >
-            Get In Touch
-          </button>
-          <button
-            onClick={onAboutClick}
-            className={`${styles.button} ${styles.secondaryButton}`}
-          >
-            Learn More
-          </button>
+    <div className={styles.heroContainer}>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className={styles.status}
+      >
+        <span className={styles.dot}></span>
+        Available for hire
+      </motion.div>
+
+      <h1 className={styles.title}>
+        Building <span className={styles.gradientText}>Digital</span><br />
+        <span className={styles.outlineText}>Experiences</span>
+      </h1>
+
+      <p className={styles.subtitle}>
+        A 13-year-old fullstack developer crafting polished solutions in Java and React.
+      </p>
+
+      <div className={styles.ctaWrapper}>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={styles.mainBtn}
+        >
+          See Projects
+        </motion.button>
+        <div className={styles.avatarGroup}>
+          <img src="/cat.jpeg" alt="Avatar" className={styles.avatar} />
+          <div className={styles.avatarInfo}>
+            <span className={styles.name}>itarqos</span>
+            <span className={styles.username}>@itarqos5</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

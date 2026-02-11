@@ -19,15 +19,9 @@
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: inline-block;
-  position: relative;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
 .title::after {
@@ -64,12 +58,71 @@
 }
 
 .contactCard {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
   padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.iconBtn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: var(--text-main);
   transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
+}
+
+.iconBtn:hover {
+  background: var(--primary-glow);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.emailBar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emailBar:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.mailIcon {
+  font-size: 1rem;
+}
+
+.emailText {
+  font-size: 0.875rem;
+  flex-grow: 1;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copyIcon {
+  font-size: 0.875rem;
 }
 
 .contactCard:hover {
@@ -246,25 +299,25 @@ textarea.formControl {
     margin-right: auto;
     gap: 2rem;
   }
-  
+
   .contactForm {
     order: -1;
   }
-  
+
   .contactCard {
     padding: 1.5rem;
   }
-  
+
   .cardHeader {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-  
+
   .cardIcon {
     margin: 0 auto;
   }
-  
+
   .socialLinks {
     justify-content: center;
   }
@@ -274,30 +327,30 @@ textarea.formControl {
   .contactSection {
     padding: 3rem 0;
   }
-  
+
   .title {
     font-size: 1.75rem;
   }
-  
+
   .subtitle {
     font-size: 1rem;
     padding: 0 0.5rem;
   }
-  
-  .contactCard, 
+
+  .contactCard,
   .contactForm {
     padding: 1.5rem;
     border-radius: 0.75rem;
   }
-  
+
   .formGroup {
     margin-bottom: 1.25rem;
   }
-  
+
   .formControl {
     padding: 0.75rem 1rem;
   }
-  
+
   .submitBtn {
     padding: 0.875rem 1.5rem;
     font-size: 1rem;
@@ -308,74 +361,74 @@ textarea.formControl {
   .contactSection {
     padding: 2.5rem 0;
   }
-  
+
   .title {
     font-size: 1.75rem;
   }
-  
+
   .contactContent {
     gap: 1.5rem;
   }
-  
-  .contactCard, 
+
+  .contactCard,
   .contactForm {
     padding: 1.25rem;
     border-radius: 0.75rem;
   }
-  
+
   .cardHeader {
     flex-direction: column;
     text-align: center;
     gap: 0.75rem;
     margin-bottom: 1.25rem;
   }
-  
+
   .cardIcon {
     width: 44px;
     height: 44px;
     font-size: 1.25rem;
   }
-  
+
   .cardTitle {
     font-size: 1.25rem;
   }
-  
+
   .contactText {
     font-size: 0.95rem;
     margin-bottom: 1.25rem;
   }
-  
+
   .contactItem {
     font-size: 0.95rem;
   }
-  
+
   .formGroup {
     margin-bottom: 1rem;
   }
-  
+
   .formLabel {
     font-size: 0.95rem;
     margin-bottom: 0.4rem;
   }
-  
+
   .formControl {
     font-size: 0.95rem;
     padding: 0.7rem 1rem;
   }
-  
+
   textarea.formControl {
     min-height: 120px;
   }
-  
+
   .submitBtn {
     padding: 0.8rem 1.25rem;
     font-size: 0.95rem;
   }
-  
+
   .socialLinks {
     gap: 0.75rem;
   }
-  
+
   .socialLink {
     width: 36px;
     height: 36px;
