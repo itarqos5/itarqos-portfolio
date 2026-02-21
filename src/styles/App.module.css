@@ -7,74 +7,36 @@
   position: relative;
 }
 
-.bentoWrapper {
+.mainContent {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
+  flex-direction: column;
 }
 
-.bentoGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 1.5rem;
+.section {
   width: 100%;
-  height: 100%;
-  max-width: 1400px;
-  max-height: 900px;
-}
-
-.glassCard {
-  background: var(--bg-card);
-  backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--border-card);
-  border-radius: var(--card-radius);
-  overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.glassCard:hover {
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.heroCard {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.aboutCard {
-  grid-column: span 2;
-  grid-row: span 1;
-}
-
-.skillsCard {
-  grid-column: span 1;
-  grid-row: span 2;
-}
-
-.contactCard {
-  grid-column: span 1;
-  grid-row: span 1;
-}
-
-.comingSoonCard {
-  grid-column: span 1;
-  grid-row: span 1;
+  min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 6rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.comingSoonText {
-  color: var(--text-muted);
-  font-size: 0.875rem;
-  font-weight: 500;
+.section > * {
+  width: 100%;
+  max-width: 1200px;
 }
+
+.section:last-child {
+  border-bottom: none;
+}
+
+/* Cards styling removed as we switched to full sections */
+
 
 /* Responsive */
 @media (max-width: 1024px) {
