@@ -15,8 +15,9 @@ const Skills = () => {
       <h3 className={styles.title}>Tech Stack</h3>
       <div className={styles.grid}>
         {tech.map((item, i) => (
-          <div key={i} className={styles.skillIcon} title={item.name}>
+          <div key={i} className={styles.skillIcon}>
             <span style={{ color: item.color }}>{item.icon}</span>
+            <span className={styles.skillName}>{item.name}</span>
           </div>
         ))}
       </div>

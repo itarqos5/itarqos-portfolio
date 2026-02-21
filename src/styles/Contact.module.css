@@ -18,86 +18,101 @@
   margin-bottom: 3rem;
 }
 
+.contactCard {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .title::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -10px;
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  border-radius: 2px;
+  display: none;
 }
 
 .subtitle {
-  color: var(--text-secondary);
-  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
   max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.7;
 }
 
 .contactContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  margin-top: 3rem;
-}
-
-.contactInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.contactCard {
-  padding: 2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: contents; /* Remove grid */
 }
 
 .socials {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 .iconBtn {
-  width: 44px;
-  height: 44px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  font-size: 1.25rem;
+  border-radius: 20px;
+  font-size: 2.5rem;
   color: var(--text-main);
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .iconBtn:hover {
   background: var(--primary-glow);
   border-color: var(--primary);
   color: var(--primary);
+  transform: translateY(-8px) !important;
 }
 
 .emailBar {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: space-between;
+  gap: 2rem;
   background: rgba(255, 255, 255, 0.03);
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
   width: 100%;
+  max-width: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.emailBar:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.emailText {
+  font-size: 1.25rem;
+  font-family: monospace;
+  color: var(--text-muted);
+}
+
+.mailIcon, .copyIcon {
+  font-size: 1.5rem;
+  color: var(--text-main);
+}
   border: 1px solid rgba(255, 255, 255, 0.05);
   color: var(--text-muted);
   cursor: pointer;
