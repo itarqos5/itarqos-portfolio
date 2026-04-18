@@ -16,8 +16,8 @@ export default function About() {
 
       <div className={styles.stats}>
         <div className={styles.statItem}>
-          <span className={styles.statValue}>13</span>
-          <span className={styles.statLabel}>Years Old</span>
+          <span className={styles.statValue}>UI/UX</span>
+          <span className={styles.statLabel}>Focus</span>
         </div>
         <div className={styles.statLine}></div>
         <div className={styles.statItem}>

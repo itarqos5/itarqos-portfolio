@@ -45,7 +45,7 @@ export default function Header({ activeSection, onNavClick, isScrolled }) {
           
           <nav className={styles.nav}>
             <ul className={styles.navList}>
-              {['home', 'about', 'skills', 'contact'].map((item) => (
+              {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
                 <li key={item}>
                   <button
                     onClick={() => handleNavItemClick(item)}
@@ -96,7 +96,7 @@ export default function Header({ activeSection, onNavClick, isScrolled }) {
       
       <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuActive : ''}`}>
         <ul className={styles.mobileNavList}>
-          {['home', 'about', 'skills', 'contact'].map((item) => (
+          {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
             <li key={item}>
               <button
                 onClick={() => handleNavItemClick(item)}
