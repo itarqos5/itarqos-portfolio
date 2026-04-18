@@ -45,7 +45,7 @@ function App() {
 
       <main className={styles.mainContent}>
         <section id="home" className={styles.section}>
-          <Hero />
+          <Hero onSeeProjects={() => scrollToSection('projects')} />
         </section>
 
         <section id="about" className={styles.section}>

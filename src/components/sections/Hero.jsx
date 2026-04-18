@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import styles from '../../styles/Hero.module.css';
 
-export default function Hero() {
+export default function Hero({ onSeeProjects }) {
   return (
     <div className={styles.heroContainer}>
       <motion.div
@@ -20,7 +20,7 @@ export default function Hero() {
       </h1>
 
       <p className={styles.subtitle}>
-        A 13-year-old fullstack developer crafting polished solutions in Java and React.
+        A fullstack developer crafting polished solutions in Java and React.
       </p>
 
       <div className={styles.ctaWrapper}>
@@ -28,6 +28,7 @@ export default function Hero() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className={styles.mainBtn}
+          onClick={onSeeProjects}
         >
           See Projects
         </motion.button>
