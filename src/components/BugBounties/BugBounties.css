@@ -1,0 +1,83 @@
+.bounties {
+  padding: 2rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.bounties-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 2.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-left: 3px solid var(--accent);
+  border-radius: 20px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bounties-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 8px 32px var(--glow);
+}
+
+.bounties-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 14px;
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--accent);
+}
+
+.bounties-icon svg {
+  width: 1.65rem;
+  height: 1.65rem;
+}
+
+.bounties-content {
+  flex: 1;
+}
+
+.bounties-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.bounties-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.bounties-text em {
+  font-style: normal;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .bounties {
+    padding: 2rem 1rem;
+  }
+
+  .bounties-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.75rem 1.5rem;
+    border-left: none;
+    border-top: 3px solid var(--accent);
+  }
+
+  .bounties-text {
+    font-size: 0.95rem;
+  }
+}

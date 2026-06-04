@@ -1,0 +1,139 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1.5rem 3rem;
+  text-align: center;
+}
+
+.hero-headline {
+  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(180deg, #f8fafc 0%, rgba(14, 165, 233, 0.3) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 60px var(--glow-strong), 0 0 120px var(--glow);
+  filter: drop-shadow(0 0 30px rgba(14, 165, 233, 0.4));
+}
+
+.hero-profile {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--border-accent);
+  box-shadow: 0 0 30px var(--glow), 0 0 60px rgba(14, 165, 233, 0.1);
+  margin-bottom: 1.75rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-profile:hover {
+  box-shadow: 0 0 40px var(--glow-strong), 0 0 80px rgba(14, 165, 233, 0.2);
+}
+
+.hero-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-bio {
+  max-width: 600px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+.hero-bio strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.hero-tech {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.hero-tech-category {
+  text-align: left;
+}
+
+.hero-tech-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.hero-tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.hero-tech-badge {
+  padding: 0.4rem 0.95rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 100px;
+  white-space: nowrap;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.hero-tech-badge:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-accent);
+  transform: translateY(-1px);
+}
+
+.hero-tech-badge.learning {
+  border-style: dashed;
+  color: var(--text-muted);
+}
+
+.hero-tech-badge.learning::after {
+  content: '';
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem 2rem;
+  }
+
+  .hero-headline {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .hero-profile {
+    width: 96px;
+    height: 96px;
+  }
+
+  .hero-bio {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-tech {
+    gap: 1.75rem;
+  }
+
+  .hero-tech-badge {
+    padding: 0.35rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

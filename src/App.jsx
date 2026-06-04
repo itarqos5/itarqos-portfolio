@@ -1,71 +1,32 @@
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import BentoBackground from './components/layout/BentoBackground';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-import Hero from './components/sections/Hero';
-import About from './components/sections/About';
-import Skills from './components/sections/Skills';
-import Projects from './components/sections/Projects';
-import Contact from './components/sections/Contact';
-import styles from './styles/App.module.css';
+import { useState, useCallback } from 'react';
+import IntroAnimation from './components/IntroAnimation/IntroAnimation';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Experience from './components/Experience/Experience';
+import BugBounties from './components/BugBounties/BugBounties';
+import Footer from './components/Footer/Footer';
+import './App.css';
 
 function App() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [introComplete, setIntroComplete] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+  const handleIntroComplete = useCallback(() => {
+    setIntroComplete(true);
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    if (sectionId === 'home') {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
+  if (!introComplete) {
+    return <IntroAnimation onComplete={handleIntroComplete} />;
+  }
 
   return (
-    <div className={styles.appContainer}>
-      <BentoBackground />
-      
-      <Header 
-        activeSection="" 
-        onNavClick={scrollToSection} 
-        isScrolled={isScrolled} 
-      />
-
-      <main className={styles.mainContent}>
-        <section id="home" className={styles.section}>
-          <Hero onSeeProjects={() => scrollToSection('projects')} />
-        </section>
-
-        <section id="about" className={styles.section}>
-          <About />
-        </section>
-
-        <section id="skills" className={styles.section}>
-          <Skills />
-        </section>
-
-        <section id="projects" className={styles.section}>
-          <Projects />
-        </section>
-
-        <section id="contact" className={styles.section}>
-          <Contact />
-        </section>
+    <div className="app">
+      <Navbar />
+      <main className="app-main">
+        <Hero />
+        <Experience />
+        <BugBounties />
       </main>
-
-      <Footer onHomeClick={scrollToSection} />
+      <Footer />
     </div>
   );
 }
