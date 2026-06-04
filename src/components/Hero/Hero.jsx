@@ -11,8 +11,10 @@ import {
   SiLinux,
   SiUbuntu,
   SiDocker,
+  SiDiscord,
+  SiJavascript,
 } from 'react-icons/si';
-import { FaJava, FaServer, FaCube, FaGraduationCap } from 'react-icons/fa';
+import { FaJava, FaServer, FaCube, FaPython, FaPuzzlePiece, FaHammer, FaTools } from 'react-icons/fa';
 import './Hero.css';
 
 const techCategories = [
@@ -34,6 +36,24 @@ const techCategories = [
       { label: 'Flask', icon: <SiFlask /> },
       { label: 'FastAPI', icon: <SiFastapi /> },
       { label: 'Django', icon: <SiDjango /> },
+    ],
+  },
+  {
+    title: 'Discord Bot Dev',
+    icon: <SiDiscord />,
+    color: '#5865f2',
+    items: [
+      { label: 'Discord.py', icon: <FaPython /> },
+      { label: 'Discord.js', icon: <SiJavascript /> },
+    ],
+  },
+  {
+    title: 'Minecraft Modding',
+    icon: <FaPuzzlePiece />,
+    color: '#a855f7',
+    items: [
+      { label: 'Fabric', icon: <FaHammer /> },
+      { label: 'NeoForge', icon: <FaTools /> },
     ],
   },
   {
@@ -94,14 +114,10 @@ export default function Hero() {
                 <span
                   key={item.label}
                   className={`hero-tech-badge${item.learning ? ' badge-learning' : ''}`}
+                  data-tooltip={item.learning ? 'Currently learning' : undefined}
                 >
                   <span className="badge-icon">{item.icon}</span>
                   <span className="badge-label">{item.label}</span>
-                  {item.learning && (
-                    <span className="badge-learning-icon" title="Currently learning">
-                      <FaGraduationCap />
-                    </span>
-                  )}
                 </span>
               ))}
             </div>
