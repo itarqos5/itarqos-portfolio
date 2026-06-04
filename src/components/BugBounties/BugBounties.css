@@ -41,6 +41,7 @@
 
 .bounties-content {
   flex: 1;
+  min-width: 0;
 }
 
 .bounties-label {
@@ -50,12 +51,14 @@
   letter-spacing: 0.08em;
   color: var(--accent);
   margin-bottom: 0.4rem;
+  display: block;
 }
 
 .bounties-text {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--text-main);
+  word-wrap: break-word;
 }
 
 .bounties-text em {
@@ -66,15 +69,34 @@
 
 @media (max-width: 640px) {
   .bounties {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .bounties-card {
     flex-direction: column;
-    text-align: center;
-    padding: 1.75rem 1.5rem;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1.5rem 1.25rem;
+    gap: 1rem;
     border-left: none;
     border-top: 3px solid var(--accent);
+    border-radius: 16px;
+  }
+
+  .bounties-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 10px;
+    align-self: center;
+  }
+
+  .bounties-icon svg {
+    width: 1.35rem;
+    height: 1.35rem;
+  }
+
+  .bounties-content {
+    text-align: center;
   }
 
   .bounties-text {

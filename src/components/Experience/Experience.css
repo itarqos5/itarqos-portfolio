@@ -99,17 +99,33 @@
 }
 
 .experience-card-link svg {
-  width: 0.9rem;
-  height: 0.9rem;
+  width: 1rem;
+  height: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .experience {
+    padding: 1.5rem 1rem;
+  }
+
   .experience-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .experience {
-    padding: 2rem 1rem;
+  .experience-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .experience-card-icon {
+    width: 56px;
+    height: 56px;
   }
 }

@@ -1,5 +1,6 @@
+import { useState, useCallback, useEffect } from 'react';
 import { FiGithub, FiTwitter } from 'react-icons/fi';
-import { Package, Coffee } from 'lucide-react';
+import { Package, Coffee, Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const links = [
@@ -10,26 +11,87 @@ const links = [
 ];
 
 export default function Navbar() {
-  return (
-    <nav className="navbar">
-      <div className="navbar-inner">
-        <span className="navbar-brand">Literal</span>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <div className="navbar-links">
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  return (
+    <>
+      <nav className="navbar">
+        <div className="navbar-inner">
+          <button
+            className="navbar-hamburger"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Open menu"
+          >
+            <Menu />
+          </button>
+
+          <span className="navbar-brand">Literal</span>
+
+          <div className="navbar-links desktop-only">
+            {links.map(({ href, icon: Icon, label }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="navbar-icon-link"
+                aria-label={label}
+              >
+                <Icon />
+              </a>
+            ))}
+          </div>
+
+          <div className="navbar-spacer" />
+        </div>
+      </nav>
+
+      <div
+        className={`navbar-overlay${menuOpen ? ' overlay-active' : ''}`}
+        onClick={closeMenu}
+      />
+
+      <aside className={`navbar-sidebar${menuOpen ? ' sidebar-active' : ''}`}>
+        <div className="sidebar-header">
+          <span className="navbar-brand">Literal</span>
+          <button
+            className="sidebar-close"
+            onClick={closeMenu}
+            aria-label="Close menu"
+          >
+            <X />
+          </button>
+        </div>
+
+        <div className="sidebar-links">
           {links.map(({ href, icon: Icon, label }) => (
             <a
               key={label}
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="navbar-icon-link"
-              aria-label={label}
+              className="sidebar-link"
+              onClick={closeMenu}
             >
-              <Icon />
+              <Icon className="sidebar-link-icon" />
+              <span>{label}</span>
             </a>
           ))}
         </div>
-      </div>
-    </nav>
+      </aside>
+    </>
   );
 }

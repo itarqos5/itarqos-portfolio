@@ -49,64 +49,117 @@
   margin-bottom: 3rem;
 }
 
-.hero-bio strong {
-  color: var(--text-main);
-  font-weight: 600;
-}
-
 .hero-tech {
-  max-width: 900px;
+  max-width: 1000px;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.hero-tech-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.hero-tech-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 6px 28px var(--glow);
+  transform: translateY(-2px);
+}
+
+.hero-tech-card-header {
   display: flex;
-  flex-direction: column;
-  gap: 2.25rem;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-card);
 }
 
-.hero-tech-category {
-  text-align: left;
+.hero-tech-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
 }
 
-.hero-tech-label {
-  font-size: 0.8rem;
+.hero-tech-card-title {
+  font-size: 0.95rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--primary);
-  margin-bottom: 0.75rem;
-  padding-left: 0.25rem;
+  color: var(--text-main);
+  letter-spacing: 0.02em;
 }
 
 .hero-tech-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .hero-tech-badge {
-  padding: 0.4rem 0.95rem;
-  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-main);
-  background: var(--bg-card);
+  background: rgba(14, 165, 233, 0.06);
   border: 1px solid var(--border-card);
-  border-radius: 100px;
+  border-radius: 10px;
   white-space: nowrap;
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .hero-tech-badge:hover {
-  background: var(--bg-card-hover);
+  background: rgba(14, 165, 233, 0.12);
   border-color: var(--border-accent);
   transform: translateY(-1px);
 }
 
-.hero-tech-badge.learning {
-  border-style: dashed;
-  color: var(--text-muted);
+.badge-icon {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
 }
 
-.hero-tech-badge.learning::after {
-  content: '';
+.badge-label {
+  line-height: 1;
+}
+
+.badge-learning {
+  border-color: rgba(245, 158, 11, 0.3);
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.badge-learning:hover {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(245, 158, 11, 0.12);
+}
+
+.badge-learning-icon {
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+  color: var(--warning);
+  flex-shrink: 0;
+  margin-left: 0.1rem;
+}
+
+.hero-badge-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.hero-badge-icons svg {
+  width: 0.8rem;
+  height: 0.8rem;
 }
 
 @media (max-width: 640px) {
@@ -129,11 +182,16 @@
   }
 
   .hero-tech {
-    gap: 1.75rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-tech-card {
+    padding: 1.15rem;
   }
 
   .hero-tech-badge {
-    padding: 0.35rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
   }
 }
