@@ -54,6 +54,9 @@ const techCategories = [
     items: [
       { label: 'Fabric', icon: <FaHammer /> },
       { label: 'NeoForge', icon: <FaTools /> },
+      { label: 'Paper & forks', icon: <FaServer /> },
+      { label: 'Spigot', icon: <FaCube /> },
+      { label: 'Folia', icon: <FaLeaf /> },
     ],
   },
   {
