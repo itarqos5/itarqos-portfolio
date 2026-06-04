@@ -14,7 +14,7 @@ import {
   SiDiscord,
   SiJavascript,
 } from 'react-icons/si';
-import { FaJava, FaServer, FaCube, FaPython, FaPuzzlePiece, FaHammer, FaTools } from 'react-icons/fa';
+import { FaJava, FaServer, FaCube, FaPython, FaPuzzlePiece, FaHammer, FaTools, FaLeaf } from 'react-icons/fa';
 import './Hero.css';
 
 const techCategories = [
