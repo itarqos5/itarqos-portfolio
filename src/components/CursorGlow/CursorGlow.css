@@ -10,3 +10,9 @@
   z-index: -1;
   will-change: transform;
 }
+
+@media (pointer: coarse) {
+  .cursor-glow {
+    display: none;
+  }
+}
