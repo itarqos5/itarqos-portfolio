@@ -6,6 +6,7 @@ import Experience from './components/Experience/Experience';
 import BugBounties from './components/BugBounties/BugBounties';
 import Footer from './components/Footer/Footer';
 import ScrollTop from './components/ScrollTop/ScrollTop';
+import CursorGlow from './components/CursorGlow/CursorGlow';
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       </main>
       <Footer />
       <ScrollTop />
+      <CursorGlow />
     </div>
   );
 }
