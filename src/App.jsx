@@ -7,6 +7,7 @@ import BugBounties from './components/BugBounties/BugBounties';
 import Footer from './components/Footer/Footer';
 import ScrollTop from './components/ScrollTop/ScrollTop';
 import CursorGlow from './components/CursorGlow/CursorGlow';
+import SectionDivider from './components/SectionDivider/SectionDivider';
 import './App.css';
 
 function App() {
@@ -25,7 +26,9 @@ function App() {
       <Navbar />
       <main className="app-main">
         <Hero />
+        <SectionDivider />
         <Experience />
+        <SectionDivider />
         <BugBounties />
       </main>
       <Footer />
