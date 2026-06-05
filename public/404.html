@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Lost in the void</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html, body {
+        height: 100%;
+        background: #020617;
+        color: #f1f5f9;
+        font-family: 'Playfair Display', serif;
+        font-style: italic;
+        overflow: hidden;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background:
+          repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(14, 165, 233, 0.04) 39px, rgba(14, 165, 233, 0.04) 40px),
+          repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(6, 182, 212, 0.04) 39px, rgba(6, 182, 212, 0.04) 40px),
+          radial-gradient(ellipse 80% 60% at 20% 15%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+          radial-gradient(ellipse 70% 50% at 50% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+        animation: lines1 20s linear infinite;
+      }
+
+      body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background:
+          repeating-linear-gradient(45deg, transparent, transparent 79px, rgba(14, 165, 233, 0.03) 79px, rgba(14, 165, 233, 0.03) 80px),
+          repeating-linear-gradient(-45deg, transparent, transparent 79px, rgba(6, 182, 212, 0.03) 79px, rgba(6, 182, 212, 0.03) 80px),
+          radial-gradient(ellipse 50% 70% at 75% 30%, rgba(6, 182, 212, 0.06) 0%, transparent 50%);
+        animation: lines2 25s linear infinite;
+      }
+
+      @keyframes lines1 {
+        0% { opacity: 0.6; transform: translate(0, 0); }
+        50% { opacity: 1; }
+        100% { opacity: 0.6; transform: translate(40px, 40px); }
+      }
+
+      @keyframes lines2 {
+        0% { opacity: 1; transform: translate(0, 0); }
+        50% { opacity: 0.5; }
+        100% { opacity: 1; transform: translate(-40px, -40px); }
+      }
+
+      .notfound {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .notfound-code {
+        font-size: clamp(8rem, 20vw, 12rem);
+        font-weight: 900;
+        font-style: italic;
+        line-height: 1;
+        background: linear-gradient(180deg, #f8fafc 0%, rgba(14, 165, 233, 0.3) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 60px rgba(14, 165, 233, 0.3), 0 0 120px rgba(14, 165, 233, 0.15);
+        margin-bottom: 1rem;
+      }
+
+      .notfound-line {
+        width: 80px;
+        height: 2px;
+        margin: 0 auto 2rem;
+        background: linear-gradient(90deg, transparent, #06b6d4, transparent);
+      }
+
+      .notfound-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-style: italic;
+        color: #f1f5f9;
+        margin-bottom: 0.75rem;
+      }
+
+      .notfound-desc {
+        font-size: 1rem;
+        color: #94a3b8;
+        max-width: 360px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.7;
+      }
+
+      .notfound-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 2rem;
+        font-family: inherit;
+        font-style: italic;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #f1f5f9;
+        background: rgba(14, 165, 233, 0.1);
+        border: 1px solid rgba(6, 182, 212, 0.25);
+        border-radius: 100px;
+        text-decoration: none;
+        transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .notfound-home:hover {
+        background: rgba(14, 165, 233, 0.2);
+        border-color: rgba(14, 165, 233, 0.5);
+        box-shadow: 0 0 24px rgba(14, 165, 233, 0.2);
+      }
+
+      .notfound-glitch {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: clamp(8rem, 20vw, 12rem);
+        font-weight: 900;
+        font-style: italic;
+        color: rgba(6, 182, 212, 0.3);
+        pointer-events: none;
+        z-index: -1;
+        animation: glitch 3s ease-in-out infinite;
+      }
+
+      @keyframes glitch {
+        0%, 100% { opacity: 0; transform: translate(-50%, -50%); }
+        15% { opacity: 0.4; transform: translate(calc(-50% - 3px), -50%); }
+        20% { opacity: 0; transform: translate(-50%, -50%); }
+        25% { opacity: 0.3; transform: translate(calc(-50% + 2px), -50%); }
+        30% { opacity: 0; transform: translate(-50%, -50%); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="notfound">
+      <div class="notfound-code">404</div>
+      <div class="notfound-glitch">404</div>
+      <div class="notfound-line"></div>
+      <h1 class="notfound-title">Lost in the void</h1>
+      <p class="notfound-desc">
+        This page doesn't exist. It drifted into the digital abyss.
+      </p>
+      <a href="/" class="notfound-home">&larr; Back home</a>
+    </div>
+  </body>
+</html>
