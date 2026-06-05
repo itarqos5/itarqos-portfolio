@@ -150,18 +150,124 @@
         25% { opacity: 0.3; transform: translate(calc(-50% + 2px), -50%); }
         30% { opacity: 0; transform: translate(-50%, -50%); }
       }
+
+      .notfound-main-code,
+      .notfound-main-title,
+      .notfound-main-desc {
+        transition: opacity 0.5s ease;
+      }
+
+      .notfound-secret {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.8s ease;
+      }
+
+      .notfound-secret.revealed {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .secret-icon {
+        font-size: 2.5rem;
+        color: #f59e0b;
+        margin-bottom: 1rem;
+        animation: starPulse 1.5s ease-in-out infinite;
+      }
+
+      @keyframes starPulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(245, 158, 11, 0.6)); }
+        50% { transform: scale(1.15); filter: drop-shadow(0 0 18px rgba(245, 158, 11, 0.9)); }
+      }
+
+      .secret-code {
+        font-size: clamp(6rem, 15vw, 9rem);
+        font-weight: 900;
+        font-style: italic;
+        line-height: 1;
+        background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #f59e0b 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 40px rgba(245, 158, 11, 0.4);
+        margin-bottom: 0.5rem;
+      }
+
+      .secret-title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-style: italic;
+        color: #fbbf24;
+        margin-bottom: 0.75rem;
+      }
+
+      .secret-text {
+        font-size: 1rem;
+        color: #94a3b8;
+        margin-bottom: 0.5rem;
+      }
+
+      .secret-hint {
+        font-size: 0.8rem;
+        color: #64748b;
+        font-style: italic;
+      }
     </style>
   </head>
   <body>
     <div class="notfound">
-      <div class="notfound-code">404</div>
+      <div class="notfound-code notfound-main-code">404</div>
       <div class="notfound-glitch">404</div>
       <div class="notfound-line"></div>
-      <h1 class="notfound-title">Lost in the void</h1>
-      <p class="notfound-desc">
+      <h1 class="notfound-title notfound-main-title">Lost in the void</h1>
+      <p class="notfound-desc notfound-main-desc">
         This page doesn't exist. It drifted into the digital abyss.
       </p>
       <a href="/" class="notfound-home">&larr; Back home</a>
+
+      <div class="notfound-secret" id="secret">
+        <div class="secret-icon">&#9733;</div>
+        <div class="secret-code">418</div>
+        <h2 class="secret-title">I'm a teapot</h2>
+        <p class="secret-text">
+          You found the easter egg. The void smiles back.
+        </p>
+        <p class="secret-hint">Konami code, huh?</p>
+      </div>
     </div>
+
+    <script>
+      (function() {
+        var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        var pos = 0;
+        var secret = document.getElementById('secret');
+        var codeEl = document.querySelector('.notfound-main-code');
+        var titleEl = document.querySelector('.notfound-main-title');
+        var descEl = document.querySelector('.notfound-main-desc');
+        var glitchEl = document.querySelector('.notfound-glitch');
+
+        document.addEventListener('keydown', function(e) {
+          if (e.keyCode === konami[pos]) {
+            pos++;
+            if (pos === konami.length) {
+              pos = 0;
+              if (codeEl) codeEl.style.opacity = '0';
+              if (titleEl) titleEl.style.opacity = '0';
+              if (descEl) descEl.style.opacity = '0';
+              if (glitchEl) glitchEl.style.display = 'none';
+              secret.classList.add('revealed');
+              document.body.style.background = '#000';
+            }
+          } else {
+            pos = 0;
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
