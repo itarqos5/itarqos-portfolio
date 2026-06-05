@@ -15,6 +15,7 @@ import {
   SiJavascript,
 } from 'react-icons/si';
 import { FaJava, FaServer, FaCube, FaPython, FaPuzzlePiece, FaHammer, FaTools, FaLeaf } from 'react-icons/fa';
+import useReveal from '../../hooks/useReveal';
 import './Hero.css';
 
 const techCategories = [
@@ -91,8 +92,10 @@ const techCategories = [
 ];
 
 export default function Hero() {
+  const [sectionRef, visible] = useReveal();
+
   return (
-    <section className="hero">
+    <section ref={sectionRef} className={`hero reveal${visible ? ' reveal-visible' : ''}`}>
       <h1 className="hero-headline">LITERAL</h1>
 
       <div className="hero-profile">

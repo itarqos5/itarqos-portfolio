@@ -1,9 +1,12 @@
 import { Shield } from 'lucide-react';
+import useReveal from '../../hooks/useReveal';
 import './BugBounties.css';
 
 export default function BugBounties() {
+  const [sectionRef, visible] = useReveal();
+
   return (
-    <section className="bounties">
+    <section ref={sectionRef} className={`bounties reveal${visible ? ' reveal-visible' : ''}`}>
       <div className="bounties-card">
         <div className="bounties-icon">
           <Shield />

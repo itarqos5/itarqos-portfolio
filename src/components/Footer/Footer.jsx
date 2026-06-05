@@ -1,5 +1,6 @@
 import { FiGithub, FiTwitter } from 'react-icons/fi';
 import { Package, Coffee } from 'lucide-react';
+import useReveal from '../../hooks/useReveal';
 import './Footer.css';
 
 const links = [
@@ -11,9 +12,10 @@ const links = [
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const [footerRef, visible] = useReveal();
 
   return (
-    <footer className="footer">
+    <footer ref={footerRef} className={`footer reveal${visible ? ' reveal-visible' : ''}`}>
       <div className="footer-inner">
         <span className="footer-brand">Literal</span>
 

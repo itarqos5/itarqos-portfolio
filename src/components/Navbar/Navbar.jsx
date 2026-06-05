@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { FiGithub, FiTwitter } from 'react-icons/fi';
 import { Package, Coffee, Menu, X } from 'lucide-react';
+import useReveal from '../../hooks/useReveal';
 import './Navbar.css';
 
 const links = [
@@ -12,6 +13,7 @@ const links = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navRef, visible] = useReveal();
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
@@ -28,7 +30,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="navbar">
+      <nav ref={navRef} className={`navbar reveal${visible ? ' reveal-visible' : ''}`}>
         <div className="navbar-inner">
           <button
             className="navbar-hamburger"

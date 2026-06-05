@@ -1,4 +1,5 @@
 import { ExternalLink } from 'lucide-react';
+import useReveal from '../../hooks/useReveal';
 import './Experience.css';
 
 const servers = [
@@ -23,8 +24,10 @@ const servers = [
 ];
 
 export default function Experience() {
+  const [sectionRef, visible] = useReveal();
+
   return (
-    <section className="experience">
+    <section ref={sectionRef} className={`experience reveal${visible ? ' reveal-visible' : ''}`}>
       <h2 className="experience-title">Experience</h2>
 
       <div className="experience-grid">
