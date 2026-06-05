@@ -5,6 +5,7 @@ import Hero from './components/Hero/Hero';
 import Experience from './components/Experience/Experience';
 import BugBounties from './components/BugBounties/BugBounties';
 import Footer from './components/Footer/Footer';
+import ScrollTop from './components/ScrollTop/ScrollTop';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <BugBounties />
       </main>
       <Footer />
+      <ScrollTop />
     </div>
   );
 }
