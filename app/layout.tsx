@@ -13,8 +13,16 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Coming Soon",
-  description: "Something awesome is being built",
+  title: "Literal: Developer Portfolio",
+  description: "Passionate developer & software engineer, writing code line by line",
+  openGraph: {
+    title: "Literal: Developer Portfolio",
+    description: "Passionate developer & software engineer, writing code line by line",
+    images: ["/profile.png"],
+  },
+  icons: {
+    icon: "/profile.png",
+  },
 };
 
 export default function RootLayout({
