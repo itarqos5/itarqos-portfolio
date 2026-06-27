@@ -3,9 +3,9 @@
 import { useMemo } from "react";
 
 function wavePath(segments: number, amplitude: number): string {
-  const w = 400;
+  const w = 100;
   const step = w / segments;
-  const midY = 40;
+  const midY = 15;
   let d = `M 0 ${midY}`;
   for (let i = 0; i < segments; i++) {
     const x0 = i * step;
@@ -19,7 +19,7 @@ function wavePath(segments: number, amplitude: number): string {
 }
 
 export default function HeroSection() {
-  const path = useMemo(() => wavePath(16, 25), []);
+  const path = useMemo(() => wavePath(20, 12), []);
 
   return (
     <div className="relative z-10 flex min-h-screen items-center px-20">
@@ -35,15 +35,22 @@ export default function HeroSection() {
         </p>
       </div>
 
-      <div className="flex-1 hidden md:block mx-8">
-        <svg width="100%" height="80" className="overflow-visible" viewBox="0 0 400 80" preserveAspectRatio="xMidYMid meet">
+      <div className="flex-1 hidden md:block mx-4">
+        <svg
+          width="100%"
+          height="60"
+          viewBox="0 0 100 30"
+          preserveAspectRatio="none"
+          className="overflow-visible"
+        >
           <path
             d={path}
             fill="none"
             stroke="#3f3f46"
-            strokeWidth="1.5"
-            strokeDasharray="8 6"
+            strokeWidth="0.8"
+            strokeDasharray="3 3"
             strokeLinecap="round"
+            vectorEffect="non-scaling-stroke"
           />
         </svg>
       </div>
