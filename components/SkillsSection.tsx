@@ -3,13 +3,13 @@
 import { useEffect, useState } from "react";
 
 const ICONS: Record<string, string> = {
-  JavaScript: "https://cdn.jsdelivr.net/npm/simple-icons@14/icons/javascript.svg",
-  TypeScript: "https://cdn.jsdelivr.net/npm/simple-icons@14/icons/typescript.svg",
-  Python: "https://cdn.jsdelivr.net/npm/simple-icons@14/icons/python.svg",
-  Rust: "https://cdn.jsdelivr.net/npm/simple-icons@14/icons/rust.svg",
-  Java: "https://cdn.jsdelivr.net/npm/simple-icons@14/icons/openjdk.svg",
-  "C#": "https://cdn.jsdelivr.net/npm/simple-icons@14/icons/csharp.svg",
-  "C++": "https://cdn.jsdelivr.net/npm/simple-icons@14/icons/cplusplus.svg",
+  JavaScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  TypeScript: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  Python: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+  Rust: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg",
+  Java: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  "C#": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  "C++": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
 };
 
 const COLORS: Record<string, string> = {
