@@ -17,7 +17,7 @@ const reviews = [
 
 export default function ReviewsSection() {
   return (
-    <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-8 snap-start">
+    <section className="relative z-10 min-h-screen flex flex-col items-center justify-center px-8">
       <h2 className="mb-4 text-center font-sans text-xs tracking-[0.3em] text-neutral-600 uppercase">
         Feedback
       </h2>

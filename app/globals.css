@@ -53,10 +53,3 @@ body {
 .animate-blur-in {
   animation: blur-in 0.8s ease-out forwards;
 }
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .snap-start {
-    scroll-snap-align: start;
-  }
-}

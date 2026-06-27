@@ -7,7 +7,7 @@ import LoadingOverlay from "@/components/LoadingOverlay";
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory bg-neutral-950 scroll-smooth">
+    <div className="relative min-h-screen bg-neutral-950">
       <LoadingOverlay />
       <Navbar />
       <HeroSection />

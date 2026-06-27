@@ -22,7 +22,7 @@ export default function HeroSection() {
   const path = useMemo(() => wavePath(20, 12), []);
 
   return (
-    <section className="relative z-10 flex min-h-screen flex-col md:flex-row items-center justify-center md:justify-between px-8 md:px-20 gap-12 md:gap-0 snap-start">
+    <section className="relative z-10 flex min-h-screen flex-col md:flex-row items-center justify-center md:justify-between px-8 md:px-20 gap-12 md:gap-0">
       <div className="flex flex-col gap-5 shrink-0 text-center md:text-left">
         <p className="font-sans text-sm tracking-[0.3em] text-neutral-500 uppercase">
           Developer &amp; engineer

@@ -6,7 +6,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 border-t border-neutral-800/40 py-10 px-8 snap-start">
+    <footer className="relative z-10 border-t border-neutral-800/40 py-10 px-8">
       <div className="flex flex-col items-center gap-6">
         <div className="flex gap-8">
           {links.map((link) => (

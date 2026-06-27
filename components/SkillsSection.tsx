@@ -49,7 +49,7 @@ export default function SkillsSection() {
 
   if (!loaded) {
     return (
-    <section className="relative z-10 pt-32 pb-48 px-8 md:px-12 snap-start">
+    <section className="relative z-10 pt-32 pb-48 px-8 md:px-12 ">
         <h2 className="mb-4 text-center font-sans text-xs tracking-[0.3em] text-neutral-600 uppercase">
           What I work with
         </h2>
@@ -69,7 +69,7 @@ export default function SkillsSection() {
   }
 
   return (
-      <section className="relative z-10 pt-32 pb-48 px-8 md:px-12 snap-start">
+      <section className="relative z-10 pt-32 pb-48 px-8 md:px-12 ">
       <h2 className="mb-4 text-center font-sans text-xs tracking-[0.3em] text-neutral-600 uppercase">
         What I work with
       </h2>
