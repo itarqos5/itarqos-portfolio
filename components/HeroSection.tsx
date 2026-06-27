@@ -22,20 +22,20 @@ export default function HeroSection() {
   const path = useMemo(() => wavePath(20, 12), []);
 
   return (
-    <div className="relative z-10 flex min-h-screen items-center px-20">
-      <div className="flex flex-col gap-5 shrink-0">
+    <section className="relative z-10 flex min-h-screen flex-col md:flex-row items-center justify-center md:justify-between px-8 md:px-20 gap-12 md:gap-0 snap-start">
+      <div className="flex flex-col gap-5 shrink-0 text-center md:text-left">
         <p className="font-sans text-sm tracking-[0.3em] text-neutral-500 uppercase">
           Developer &amp; engineer
         </p>
-        <h1 className="font-serif text-7xl md:text-8xl font-bold text-neutral-100 tracking-tight leading-none">
+        <h1 className="font-serif text-6xl md:text-8xl font-bold text-neutral-100 tracking-tight leading-none">
           Literal
         </h1>
-        <p className="font-sans text-lg text-neutral-500 max-w-sm leading-relaxed">
+        <p className="font-sans text-base md:text-lg text-neutral-500 max-w-sm leading-relaxed mx-auto md:mx-0">
           Building things that matter — one line at a time.
         </p>
       </div>
 
-      <div className="flex-1 hidden md:block mx-4">
+      <div className="hidden md:block flex-1 mx-4">
         <svg
           width="100%"
           height="60"
@@ -55,11 +55,11 @@ export default function HeroSection() {
         </svg>
       </div>
 
-      <div className="relative z-0 hidden md:block shrink-0">
-        <div className="relative w-72 h-72 rounded-full overflow-hidden ring-1 ring-neutral-800">
+      <div className="relative z-0 shrink-0">
+        <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden ring-1 ring-neutral-800">
           <img src="/profile.png" alt="Profile" className="w-full h-full object-cover" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
