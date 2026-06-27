@@ -1,6 +1,26 @@
 "use client";
 
+import { useMemo } from "react";
+
+function wavePath(segments: number, amplitude: number): string {
+  const w = 400;
+  const step = w / segments;
+  const midY = 40;
+  let d = `M 0 ${midY}`;
+  for (let i = 0; i < segments; i++) {
+    const x0 = i * step;
+    const x2 = (i + 1) * step;
+    const cx = x0 + step / 2;
+    const dir = i % 2 === 0 ? -1 : 1;
+    const cy = midY + dir * amplitude;
+    d += ` Q ${cx} ${cy}, ${x2} ${midY}`;
+  }
+  return d;
+}
+
 export default function HeroSection() {
+  const path = useMemo(() => wavePath(16, 25), []);
+
   return (
     <div className="relative z-10 flex min-h-screen items-center px-20">
       <div className="flex flex-col gap-5 shrink-0">
@@ -16,12 +36,10 @@ export default function HeroSection() {
       </div>
 
       <div className="flex-1 hidden md:block mx-8">
-        <svg width="100%" height="60" className="overflow-visible">
-          <line
-            x1="0"
-            y1="30"
-            x2="100%"
-            y2="30"
+        <svg width="100%" height="80" className="overflow-visible" viewBox="0 0 400 80" preserveAspectRatio="xMidYMid meet">
+          <path
+            d={path}
+            fill="none"
             stroke="#3f3f46"
             strokeWidth="1.5"
             strokeDasharray="8 6"

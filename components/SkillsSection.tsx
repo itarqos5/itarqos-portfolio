@@ -22,6 +22,13 @@ const COLORS: Record<string, string> = {
   "C++": "#00599C",
 };
 
+function iconStyle(name: string): React.CSSProperties {
+  if (name === "Rust") {
+    return { filter: "invert(38%) sepia(52%) saturate(628%) hue-rotate(335deg) brightness(91%) contrast(93%)" };
+  }
+  return {};
+}
+
 const skills = [
   { name: "JavaScript" },
   { name: "TypeScript", parent: "JavaScript" },
@@ -117,7 +124,7 @@ export default function SkillsSection() {
                     border: `2px solid ${color}`,
                   }}
                 >
-                  <img src={icon} alt={skill.name} className="w-8 h-8" />
+                  <img src={icon} alt={skill.name} className="w-8 h-8" style={iconStyle(skill.name)} />
                 </div>
                 <span className="text-xs text-neutral-400 font-sans">{skill.name}</span>
               </div>
@@ -170,7 +177,7 @@ export default function SkillsSection() {
                     border: `1.5px solid ${color}`,
                   }}
                 >
-                  <img src={icon} alt={child.name} className="w-6 h-6" />
+                  <img src={icon} alt={child.name} className="w-6 h-6" style={iconStyle(child.name)} />
                 </div>
                 <span className="text-[10px] text-neutral-500 font-sans">{child.name}</span>
               </div>
