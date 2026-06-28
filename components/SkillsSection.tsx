@@ -69,7 +69,10 @@ export default function SkillsSection() {
   }
 
   return (
-      <section className="relative z-10 pt-32 pb-48 px-8 md:px-12 ">
+    <section
+      id="skills"
+      className="relative z-10 pt-32 pb-48 px-4 md:px-12 w-full flex flex-col items-center overflow-hidden"
+    >
       <h2 className="mb-4 text-center font-sans text-xs tracking-[0.3em] text-neutral-600 uppercase">
         What I work with
       </h2>
@@ -77,11 +80,15 @@ export default function SkillsSection() {
         Experience
       </h2>
 
-      <div className="relative mx-auto" style={{ width: "600px", height: "600px" }}>
-        {/* Center profile */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full overflow-hidden ring-2 ring-neutral-700 z-10">
-          <img src="/profile.png" alt="Profile" className="w-full h-full object-cover" />
-        </div>
+      <div className="relative flex items-center justify-center w-full h-[320px] sm:h-[480px] md:h-[600px] overflow-visible">
+        <div
+          className="absolute origin-center scale-[0.5] sm:scale-[0.8] md:scale-100 transition-all duration-300"
+          style={{ width: "600px", height: "600px" }}
+        >
+          {/* Center profile */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full overflow-hidden ring-2 ring-neutral-800 z-10 bg-neutral-950">
+            <img src="/profile.png" alt="Profile" className="w-full h-full object-cover" />
+          </div>
 
         {/* Main skills */}
         {skills.filter(s => !s.parent).map((skill, i) => {
@@ -184,6 +191,7 @@ export default function SkillsSection() {
             </div>
           );
         })}
+        </div>
       </div>
     </section>
   );

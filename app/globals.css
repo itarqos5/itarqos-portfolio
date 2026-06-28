@@ -53,3 +53,21 @@ body {
 .animate-blur-in {
   animation: blur-in 0.8s ease-out forwards;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* offset for fixed navbar */
+}
+
+@keyframes wave-flow {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-120px); /* matches wavelength */
+  }
+}
+
+.animate-wave-flow {
+  animation: wave-flow 2s linear infinite;
+}

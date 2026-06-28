@@ -13,12 +13,15 @@ export default function LoadingOverlay() {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-neutral-950/90 backdrop-blur-md">
-      <div className="relative">
-        <div className="w-24 h-24 rounded-full overflow-hidden ring-1 ring-neutral-700 animate-spin-slow">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#070708]/95 backdrop-blur-md">
+      <div className="relative flex items-center justify-center">
+        {/* Spinning Outer Ring */}
+        <div className="w-24 h-24 rounded-full border-2 border-neutral-800 border-t-neutral-300 animate-spin" />
+
+        {/* Stationary Profile Image inside */}
+        <div className="absolute w-20 h-20 rounded-full overflow-hidden ring-1 ring-neutral-800/80">
           <img src="/profile.png" alt="Loading" className="w-full h-full object-cover" />
         </div>
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
       </div>
     </div>
   );

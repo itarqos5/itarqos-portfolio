@@ -2,12 +2,26 @@
 
 export default function Navbar() {
   return (
-    <div className="relative z-10 flex justify-center py-4 md:py-6 px-4">
-      <nav className="inline-flex items-center gap-3 md:gap-5 rounded-full border border-neutral-800/40 bg-neutral-950/80 py-1.5 px-3 md:px-4 backdrop-blur-md">
-        <span className="font-serif text-xs md:text-sm font-bold text-neutral-300 mr-1 md:mr-2">Literal</span>
-        <span className="font-sans text-[10px] md:text-[11px] text-neutral-500 hover:text-neutral-200 cursor-pointer transition-colors tracking-wide">Skills</span>
-        <span className="font-sans text-[10px] md:text-[11px] text-neutral-500 hover:text-neutral-200 cursor-pointer transition-colors tracking-wide">Projects</span>
-        <span className="font-sans text-[10px] md:text-[11px] text-neutral-500 hover:text-neutral-200 cursor-pointer transition-colors tracking-wide">Reviews</span>
+    <div className="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
+      <nav className="inline-flex items-center gap-4 md:gap-6 rounded-full border border-white/5 bg-neutral-900/60 py-2 px-5 md:px-6 backdrop-blur-md shadow-2xl shadow-black/80">
+        <a
+          href="#hero"
+          className="font-serif text-xs md:text-sm font-bold text-neutral-200 hover:text-white transition-colors mr-2"
+        >
+          Literal
+        </a>
+        <a
+          href="#reviews"
+          className="font-sans text-[10px] md:text-[11px] text-neutral-400 hover:text-neutral-200 transition-colors tracking-widest uppercase"
+        >
+          Reviews
+        </a>
+        <a
+          href="#skills"
+          className="font-sans text-[10px] md:text-[11px] text-neutral-400 hover:text-neutral-200 transition-colors tracking-widest uppercase"
+        >
+          Skills
+        </a>
       </nav>
     </div>
   );

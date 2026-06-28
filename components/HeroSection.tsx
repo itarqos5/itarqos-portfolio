@@ -1,62 +1,80 @@
 "use client";
 
-import { useMemo } from "react";
-
-function wavePath(segments: number, amplitude: number): string {
-  const w = 100;
-  const step = w / segments;
-  const midY = 15;
-  let d = `M 0 ${midY}`;
-  for (let i = 0; i < segments; i++) {
-    const x0 = i * step;
-    const x2 = (i + 1) * step;
-    const cx = x0 + step / 2;
-    const dir = i % 2 === 0 ? -1 : 1;
-    const cy = midY + dir * amplitude;
-    d += ` Q ${cx} ${cy}, ${x2} ${midY}`;
-  }
-  return d;
-}
+import { useState, useEffect, useRef, useMemo } from "react";
 
 export default function HeroSection() {
-  const path = useMemo(() => wavePath(20, 12), []);
+  const [width, setWidth] = useState(0);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        setWidth(entry.contentRect.width);
+      }
+    });
+    resizeObserver.observe(containerRef.current);
+    return () => resizeObserver.disconnect();
+  }, []);
+
+  const wavelength = 120;
+
+  const path = useMemo(() => {
+    if (width === 0) return "";
+    const amplitude = 8;
+    const midY = 15;
+    let d = `M 0 ${midY}`;
+    const totalWidth = width + wavelength;
+    for (let x = 0; x <= totalWidth; x += 2) {
+      const y = midY + amplitude * Math.sin((2 * Math.PI * x) / wavelength);
+      d += ` L ${x} ${y}`;
+    }
+    return d;
+  }, [width]);
 
   return (
-    <section className="relative z-10 flex min-h-screen flex-col md:flex-row items-center justify-center md:justify-between px-8 md:px-20 gap-12 md:gap-0">
-      <div className="flex flex-col gap-5 shrink-0 text-center md:text-left">
-        <p className="font-sans text-sm tracking-[0.3em] text-neutral-500 uppercase">
+    <section
+      id="hero"
+      className="relative z-10 flex min-h-screen flex-col md:flex-row items-center justify-center md:justify-between px-8 md:px-20 gap-12 md:gap-0 pt-20 md:pt-0"
+    >
+      <div className="flex flex-col gap-5 shrink-0 text-center md:text-left select-none animate-blur-in">
+        <p className="font-sans text-xs tracking-[0.3em] text-neutral-500 uppercase">
           Developer &amp; engineer
         </p>
-        <h1 className="font-serif text-6xl md:text-8xl font-bold text-neutral-100 tracking-tight leading-none">
+        <h1 className="font-serif text-6xl md:text-8xl font-bold tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 via-neutral-100 to-neutral-400">
           Literal
         </h1>
-        <p className="font-sans text-base md:text-lg text-neutral-500 max-w-sm leading-relaxed mx-auto md:mx-0">
+        <p className="font-sans text-sm md:text-base text-neutral-500 max-w-sm leading-relaxed mx-auto md:mx-0">
           Building things that matter — one line at a time.
         </p>
       </div>
 
-      <div className="hidden md:block flex-1 mx-4">
-        <svg
-          width="100%"
-          height="60"
-          viewBox="0 0 100 30"
-          preserveAspectRatio="none"
-          className="overflow-visible"
-        >
-          <path
-            d={path}
-            fill="none"
-            stroke="#3f3f46"
-            strokeWidth="0.8"
-            strokeDasharray="3 3"
-            strokeLinecap="round"
-            vectorEffect="non-scaling-stroke"
-          />
-        </svg>
+      <div
+        ref={containerRef}
+        className="hidden md:block flex-grow mx-12 lg:mx-20 overflow-hidden relative h-[40px] flex items-center"
+      >
+        {width > 0 && (
+          <svg
+            width={width + wavelength}
+            height="30"
+            viewBox={`0 0 ${width + wavelength} 30`}
+            className="overflow-visible animate-wave-flow absolute left-0"
+            style={{ width: `${width + wavelength}px` }}
+          >
+            <path
+              d={path}
+              fill="none"
+              stroke="rgba(255, 255, 255, 0.15)"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+            />
+          </svg>
+        )}
       </div>
 
-      <div className="relative z-0 shrink-0">
-        <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden ring-1 ring-neutral-800">
+      <div className="relative z-0 shrink-0 group animate-blur-in [animation-delay:200ms]">
+        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/10 to-purple-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+        <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden ring-2 ring-neutral-800/80 hover:ring-neutral-700/80 transition-all duration-500 hover:scale-[1.02] shadow-2xl">
           <img src="/profile.png" alt="Profile" className="w-full h-full object-cover" />
         </div>
       </div>
