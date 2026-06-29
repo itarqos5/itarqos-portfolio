@@ -22,6 +22,12 @@ export default function Navbar() {
         >
           Skills
         </a>
+        <a
+          href="#technologies"
+          className="font-sans text-[10px] md:text-[11px] text-neutral-400 hover:text-neutral-200 transition-colors tracking-widest uppercase"
+        >
+          Technologies
+        </a>
       </nav>
     </div>
   );
