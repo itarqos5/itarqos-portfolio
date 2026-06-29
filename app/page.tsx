@@ -4,6 +4,7 @@ import ReviewsSection from "@/components/ReviewsSection";
 import SkillsSection from "@/components/SkillsSection";
 import Footer from "@/components/Footer";
 import LoadingOverlay from "@/components/LoadingOverlay";
+import TechnologiesSection from "@/components/TechnologiesSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HeroSection />
         <ReviewsSection />
         <SkillsSection />
+        <TechnologiesSection />
       </div>
       <Footer />
     </div>
