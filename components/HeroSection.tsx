@@ -9,7 +9,7 @@ export default function HeroSection() {
   useEffect(() => {
     if (!containerRef.current) return;
     const resizeObserver = new ResizeObserver((entries) => {
-      for (let entry of entries) {
+      for (const entry of entries) {
         setWidth(entry.contentRect.width);
       }
     });

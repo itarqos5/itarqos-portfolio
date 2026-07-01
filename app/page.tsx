@@ -5,6 +5,7 @@ import SkillsSection from "@/components/SkillsSection";
 import Footer from "@/components/Footer";
 import LoadingOverlay from "@/components/LoadingOverlay";
 import TechnologiesSection from "@/components/TechnologiesSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <ReviewsSection />
         <SkillsSection />
         <TechnologiesSection />
+        <ProjectsSection />
       </div>
       <Footer />
     </div>
