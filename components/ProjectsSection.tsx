@@ -1,9 +1,17 @@
 "use client";
 
-import { ExternalLink, Database, Cpu } from "lucide-react";
+import { ExternalLink, Database, Cpu, Server } from "lucide-react";
 import { FaGithub } from "react-icons/fa6";
 
 const projects = [
+  {
+    name: "KrakenMC",
+    description: "A blazingly fast, multi-threaded Minecraft server & proxy built in Rust.",
+    link: "https://github.com/itarqos5/KrakenMC",
+    icon: Server,
+    tags: ["Rust", "Minecraft", "Proxy", "Multi-Threaded"],
+    badgeColor: "border-rose-500/30 text-rose-300 bg-rose-500/10",
+  },
   {
     name: "Essentials-MySQL",
     description: "The popular & famous EssentialsX plugin, now with support for MySQL!",
@@ -26,7 +34,7 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative z-10 py-24 px-4 md:px-12 max-w-6xl mx-auto w-full select-none"
+      className="relative z-10 py-24 px-4 md:px-12 max-w-7xl mx-auto w-full select-none"
     >
       <h2 className="mb-4 text-center font-sans text-xs tracking-[0.3em] text-neutral-600 uppercase">
         Featured Work
@@ -35,7 +43,7 @@ export default function ProjectsSection() {
         Projects
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project) => {
           const IconComponent = project.icon;
           return (
@@ -57,7 +65,7 @@ export default function ProjectsSection() {
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2.5 rounded-lg border border-white/5 bg-neutral-800/40 text-neutral-400 hover:text-white hover:border-white/20 hover:bg-neutral-800 transition-all"
+                    className="p-2.5 rounded-lg border border-white/5 bg-neutral-800/40 text-neutral-400 hover:text-white hover:border-white/20 hover:bg-neutral-800 transition-all shrink-0 ml-2"
                     title="View on GitHub"
                   >
                     <FaGithub className="w-5 h-5" />

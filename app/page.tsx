@@ -6,24 +6,34 @@ import SkillsSection from "@/components/SkillsSection";
 import Footer from "@/components/Footer";
 import LoadingOverlay from "@/components/LoadingOverlay";
 import TechnologiesSection from "@/components/TechnologiesSection";
-import LightPillar from "@/components/LightPillar";
+import GradientWaves from "@/components/GradientWaves";
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-[#070708] text-neutral-100 overflow-x-hidden antialiased">
-      {/* 3D Light Pillar Background Animation */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-35">
-        <LightPillar
-          topColor="#5227FF"
-          bottomColor="#FF9FFC"
-          intensity={0.9}
-          rotationSpeed={0.25}
-          glowAmount={0.006}
-          pillarWidth={3.2}
-          pillarHeight={0.4}
-          noiseIntensity={0.3}
-          mixBlendMode="screen"
-          quality="high"
+      {/* 3D Gradient Waves Background Animation */}
+      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-40">
+        <GradientWaves
+          horizonColor="#7C3AED"
+          waveColor="#FF9FFC"
+          crestColor="#FFFFFF"
+          speed={0.4}
+          amplitude={2.5}
+          waveScale={0.6}
+          waveRatio={0.9}
+          swell={35}
+          turbulence={20}
+          tilt={1.11}
+          zoom={1.0}
+          height={5.5}
+          fogDepth={15}
+          detail="medium"
+          brightness={1.0}
+          opacity={1.0}
+          mouseInteraction={true}
+          parallaxStrength={0.5}
+          grain={true}
+          grainIntensity={0.05}
         />
       </div>
 
