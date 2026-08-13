@@ -11,6 +11,12 @@ export default function Navbar() {
           Literal
         </a>
         <a
+          href="#projects"
+          className="font-sans text-[10px] md:text-[11px] text-neutral-400 hover:text-neutral-200 transition-colors tracking-widest uppercase"
+        >
+          Projects
+        </a>
+        <a
           href="#reviews"
           className="font-sans text-[10px] md:text-[11px] text-neutral-400 hover:text-neutral-200 transition-colors tracking-widest uppercase"
         >
