@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import ServersSection from "@/components/ServersSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import SkillsSection from "@/components/SkillsSection";
 import Footer from "@/components/Footer";
@@ -45,6 +46,7 @@ export default function Home() {
       <div className="relative z-10">
         <HeroSection />
         <ProjectsSection />
+        <ServersSection />
         <ReviewsSection />
         <SkillsSection />
         <TechnologiesSection />
