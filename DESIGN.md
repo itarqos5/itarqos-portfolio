@@ -74,7 +74,7 @@ The system is mostly square and flat. Barlow Condensed carries large names and s
 - Pure black and warm paper-white fields with a short graphite scale.
 - Condensed uppercase display type paired with restrained sans-serif copy and mono labels.
 - One-pixel rules, open rows, and generous section spacing instead of floating cards.
-- The original profile image in full color, grayscale supporting imagery, and slow orbital motion.
+- Original-color profile and server imagery, grayscale review avatars, and slow orbital motion.
 - Square controls with visible, high-contrast focus outlines.
 
 ## Colors
@@ -180,7 +180,7 @@ Project and record links are full-width ruled rows rather than cards. A clear ti
 
 - **Do** use black or paper-white as a full section field.
 - **Do** organize repeated content with one-pixel rules and open rows.
-- **Do** preserve the main profile image in its original color; supporting avatars may remain grayscale and circular.
+- **Do** preserve profile and server images in their original colors; review avatars may remain grayscale and circular.
 - **Do** use square controls and a 2px high-contrast focus outline with a 4px offset.
 - **Do** stop continuous motion and shorten transitions when reduced motion is requested.
 

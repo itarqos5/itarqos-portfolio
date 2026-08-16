@@ -28,7 +28,7 @@ export default function ServersSection() {
                 <div className="flex items-center gap-4">
                   <div className="relative grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full border border-black/20 bg-black">
                     <Server size={18} className="text-white" />
-                    <Image src={server.icon} alt="" fill unoptimized sizes="44px" className="object-cover grayscale" />
+                    <Image src={server.icon} alt="" fill unoptimized sizes="44px" className="object-cover" />
                   </div>
                   <span className="font-medium">{server.name}</span>
                 </div>
