@@ -74,7 +74,7 @@ The system is mostly square and flat. Barlow Condensed carries large names and s
 - Pure black and warm paper-white fields with a short graphite scale.
 - Condensed uppercase display type paired with restrained sans-serif copy and mono labels.
 - One-pixel rules, open rows, and generous section spacing instead of floating cards.
-- Original-color profile and server imagery, grayscale review avatars, and slow orbital motion.
+- Original-color profile, server, and review imagery with slow orbital motion.
 - Square controls with visible, high-contrast focus outlines.
 
 ## Colors
@@ -138,7 +138,7 @@ The system is flat and uses no decorative shadows on content containers. Depth c
 
 ## Shapes
 
-Controls, content rows, and section fields use square corners. One-pixel borders provide their edge. Circles are reserved for imagery, orbital diagrams, avatars, status marks, and compact icon controls tied to those uses. Grayscale crops keep external imagery inside the monochrome system.
+Controls, content rows, and section fields use square corners. One-pixel borders provide their edge. Circles are reserved for imagery, orbital diagrams, avatars, status marks, and compact icon controls tied to those uses. Supplied profile, server, and review imagery keeps its original color inside the monochrome interface.
 
 **The Reserved Circle Rule.** A circle must represent an orbit, a person or server image, a status point, or a compact icon action. It is not a default badge or button shape.
 
@@ -180,7 +180,7 @@ Project and record links are full-width ruled rows rather than cards. A clear ti
 
 - **Do** use black or paper-white as a full section field.
 - **Do** organize repeated content with one-pixel rules and open rows.
-- **Do** preserve profile and server images in their original colors; review avatars may remain grayscale and circular.
+- **Do** preserve profile, server, and review images in their original colors and circular crops.
 - **Do** use square controls and a 2px high-contrast focus outline with a 4px offset.
 - **Do** stop continuous motion and shorten transitions when reduced motion is requested.
 

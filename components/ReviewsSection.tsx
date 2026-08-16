@@ -21,7 +21,7 @@ export default function ReviewsSection() {
           <motion.figure key={review.name} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, amount: 0.35 }} transition={{ duration: 0.55 }} className={`flex min-h-72 flex-col justify-between border-b border-white/20 p-7 md:p-10 ${index % 2 === 0 ? "md:border-r" : ""}`}>
             <blockquote className="max-w-[38ch] text-xl leading-8 text-neutral-200 md:text-2xl md:leading-9">“{review.text}”</blockquote>
             <figcaption className="mt-10 flex items-center gap-4">
-              <Image src={review.avatar} alt="" width={40} height={40} unoptimized className="h-10 w-10 rounded-full object-cover grayscale" />
+              <Image src={review.avatar} alt="" width={40} height={40} unoptimized className="h-10 w-10 rounded-full object-cover" />
               <span className="micro-type text-neutral-400">{review.name}</span>
             </figcaption>
           </motion.figure>

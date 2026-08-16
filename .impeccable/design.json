@@ -96,7 +96,7 @@
     {
       "name": "Review Cell",
       "kind": "card",
-      "description": "Ruled quote cell with a grayscale circular avatar and mono name.",
+      "description": "Ruled quote cell with an original-color circular avatar and mono name.",
       "html": "<figure class=\"ds-review\"><blockquote>“Great plugins, quick speed and cooperative.”</blockquote><figcaption><span class=\"ds-review-avatar\">L</span><span>Client name</span></figcaption></figure>",
       "css": ".ds-review { min-height: 18rem; display: flex; flex-direction: column; justify-content: space-between; margin: 0; padding: 2.5rem; border-top: 1px solid var(--line, rgba(255,255,255,0.16)); border-bottom: 1px solid var(--line, rgba(255,255,255,0.16)); background: transparent; color: var(--paper, #f5f5f2); } .ds-review blockquote { max-width: 38ch; margin: 0; color: #e5e5e5; font-family: var(--font-geist-sans, sans-serif); font-size: 1.5rem; line-height: 1.5; } .ds-review figcaption { display: flex; align-items: center; gap: 1rem; margin-top: 2.5rem; color: var(--muted, #a3a3a3); font-family: var(--font-geist-mono, monospace); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; } .ds-review-avatar { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line-strong, rgba(255,255,255,0.38)); border-radius: 9999px; color: var(--paper, #f5f5f2); }"
     },
@@ -122,7 +122,7 @@
       "Pure black and warm paper-white fields with a short graphite scale.",
       "Condensed uppercase display type paired with restrained sans-serif copy and mono labels.",
       "One-pixel rules, open rows, and generous section spacing instead of floating cards.",
-      "Grayscale imagery and slow orbital motion.",
+      "Original-color profile, server, and review imagery with slow orbital motion.",
       "Square controls with visible, high-contrast focus outlines."
     ],
     "rules": [
@@ -137,7 +137,7 @@
     "dos": [
       "Do use black or paper-white as a full section field.",
       "Do organize repeated content with one-pixel rules and open rows.",
-      "Do preserve profile and server images in their original colors; review avatars may remain grayscale and circular.",
+      "Do preserve profile, server, and review images in their original colors and circular crops.",
       "Do use square controls and a 2px high-contrast focus outline with a 4px offset.",
       "Do stop continuous motion and shorten transitions when reduced motion is requested."
     ],
