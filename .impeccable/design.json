@@ -137,7 +137,7 @@
     "dos": [
       "Do use black or paper-white as a full section field.",
       "Do organize repeated content with one-pixel rules and open rows.",
-      "Do keep images grayscale and crop avatars or identity images to circles.",
+      "Do preserve the main profile image in its original color; supporting avatars may remain grayscale and circular.",
       "Do use square controls and a 2px high-contrast focus outline with a 4px offset.",
       "Do stop continuous motion and shorten transitions when reduced motion is requested."
     ],

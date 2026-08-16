@@ -10,12 +10,12 @@ Visitors should understand Literal's technical range, inspect real work and feed
 
 ## Direction
 
-The approved composition combines `.impeccable/mocks/orbital-hero.png` and `.impeccable/mocks/eclipse-aperture.png`: oversized left-set typography faces a circular grayscale profile framed by a white eclipse and moving orbital paths. The close repeats Discord at large scale.
+The approved composition uses oversized left-set typography facing the original full-color profile image inside moving orbital paths. The close repeats Discord at large scale.
 
 ## Implementation inventory
 
 - Navigation: fixed monochrome bar with plain text anchors and a white Discord control; semantic HTML.
-- Hero: Barlow Condensed headline, semantic copy and links, Next Image profile, CSS eclipse and orbital geometry, canvas star field.
+- Hero: Barlow Condensed headline, semantic copy and links, the original profile image, CSS orbital geometry, and canvas star field.
 - Projects: three full-width editorial rows with real repository links; semantic HTML and Framer Motion.
 - Servers: light table-like list with real remote icons and plain status text.
 - Reviews: large pull quotes with existing avatars and text.

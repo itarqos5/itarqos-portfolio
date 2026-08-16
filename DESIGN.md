@@ -74,7 +74,7 @@ The system is mostly square and flat. Barlow Condensed carries large names and s
 - Pure black and warm paper-white fields with a short graphite scale.
 - Condensed uppercase display type paired with restrained sans-serif copy and mono labels.
 - One-pixel rules, open rows, and generous section spacing instead of floating cards.
-- Grayscale imagery and slow orbital motion.
+- The original profile image in full color, grayscale supporting imagery, and slow orbital motion.
 - Square controls with visible, high-contrast focus outlines.
 
 ## Colors
@@ -130,7 +130,7 @@ Content is arranged as open rows, tables, and ruled grids. Dividers normally spa
 
 ## Elevation & Depth
 
-The system is flat and uses no decorative shadows on content containers. Depth comes from the change between black and paper-white fields, fixed background stars, grayscale image cropping, overlapping orbital lines, and the navigation bar's slight transparency and blur. The only glow is the small white marker on an orbit; it is a point of light, not a general elevation effect.
+The system is flat and uses no decorative shadows on content containers. Depth comes from the change between black and paper-white fields, fixed background stars, image cropping, overlapping orbital lines, and the navigation bar's slight transparency and blur. The only glow is the small white marker on an orbit; it is a point of light, not a general elevation effect.
 
 ### Named Rules
 
@@ -180,7 +180,7 @@ Project and record links are full-width ruled rows rather than cards. A clear ti
 
 - **Do** use black or paper-white as a full section field.
 - **Do** organize repeated content with one-pixel rules and open rows.
-- **Do** keep images grayscale and crop avatars or identity images to circles.
+- **Do** preserve the main profile image in its original color; supporting avatars may remain grayscale and circular.
 - **Do** use square controls and a 2px high-contrast focus outline with a 4px offset.
 - **Do** stop continuous motion and shorten transitions when reduced motion is requested.
 

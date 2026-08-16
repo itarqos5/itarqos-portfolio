@@ -30,11 +30,10 @@ export default function HeroSection() {
 
         <motion.div initial={{ opacity: 0, scale: 0.92 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.12, ease: [0.16, 1, 0.3, 1] }} className="relative mx-auto aspect-square w-[82vw] max-w-[680px] lg:w-full">
           <div className="absolute inset-[2%] overflow-hidden rounded-full">
-            <Image src="/eclipsed-profile.png" alt="Literal" fill priority sizes="(max-width: 1024px) 82vw, 45vw" className="object-cover" />
+            <Image src="/profile.png" alt="Literal" fill priority sizes="(max-width: 1024px) 82vw, 45vw" className="object-cover" />
           </div>
           <div className="orbit-line inset-[1%] -rotate-12" />
           <div className="orbit-line -inset-[8%] rotate-[32deg] opacity-45 [animation-duration:42s]" />
-          <div className="absolute bottom-[12%] left-0 micro-type text-neutral-300">Casablanca · Remote</div>
         </motion.div>
       </div>
       <a href="#projects" className="absolute bottom-6 left-5 flex items-center gap-3 micro-type text-neutral-400 md:left-16">

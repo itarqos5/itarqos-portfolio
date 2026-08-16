@@ -14,10 +14,10 @@ export default function Home() {
     <div className="site-shell">
       {/*
         THESIS: Literal's work is presented as clear signals in a deep field, refusing the usual portfolio card grid.
-        OWN-WORLD: Pure black, paper white, graphite, hairline orbital paths, grayscale images, and square controls.
+        OWN-WORLD: Pure black, paper white, graphite, hairline orbital paths, the original profile image, and square controls.
         STORY: Visitors meet Literal, inspect real work and experience, read client feedback, then contact on Discord.
-        FIRST VIEWPORT: Large left-set name and contact action face a cropped orbital portrait inside a white eclipse.
-        FORM: Approved orbital hero and eclipse aperture combination; seed 6b141d3d.
+        FIRST VIEWPORT: Large left-set name and contact action face the original profile image inside moving orbital paths.
+        FORM: Approved orbital hero composition; seed 6b141d3d.
         FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
       */}
       <SpaceField />
