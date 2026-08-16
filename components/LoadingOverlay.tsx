@@ -1,27 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function LoadingOverlay() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(false), 1800);
-    return () => clearTimeout(timer);
+    const timer = window.setTimeout(() => setVisible(false), 650);
+    return () => window.clearTimeout(timer);
   }, []);
 
   if (!visible) return null;
-
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#070708]/95 backdrop-blur-md">
-      <div className="relative flex items-center justify-center">
-        {/* Spinning Outer Ring */}
-        <div className="w-24 h-24 rounded-full border-2 border-neutral-800 border-t-neutral-300 animate-spin" />
-
-        {/* Stationary Profile Image inside */}
-        <div className="absolute w-20 h-20 rounded-full overflow-hidden ring-1 ring-neutral-800/80">
-          <img src="/profile.png" alt="Loading" className="w-full h-full object-cover" />
-        </div>
+    <div className="fixed inset-0 z-[60] grid place-items-center bg-black" aria-hidden="true">
+      <div className="relative h-28 w-28 rounded-full border border-white/30">
+        <div className="orbit-line -inset-3" />
+        <div className="absolute inset-0 grid place-items-center display-type text-lg">Literal</div>
       </div>
     </div>
   );
