@@ -22,7 +22,7 @@ const contributions = [
 export default function ModContributionsSection() {
   return (
     <section className="section-shell section-line" aria-labelledby="mod-contributions-heading">
-      <div className="grid gap-16 lg:grid-cols-[0.7fr_1.3fr]">
+      <div className="grid gap-16 xl:grid-cols-[minmax(27rem,0.75fr)_minmax(0,1.25fr)] xl:gap-24">
         <div>
           <h2 id="mod-contributions-heading" className="section-heading">Mod contributions</h2>
           <p className="mt-7 max-w-sm leading-7 text-neutral-400">Minecraft mods I helped develop.</p>
