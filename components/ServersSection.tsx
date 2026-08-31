@@ -7,7 +7,9 @@ const servers = [
   { name: "Unstable Network", icon: "/unstable-network.png", status: "Working", role: "Developer" },
   { name: "Niche Tiers", icon: "/niche-tiers.png", status: "Working", role: "Developer", website: "https://tiers.literaluu.xyz" },
   { name: "Striker's Dev Team", icon: "https://cdn.discordapp.com/icons/1529321742059700414/62390cb287a2f6ebb0b4df2ed453e3fd.webp?size=1024", status: "Working", role: "—" },
-  { name: "MonkeySMP", icon: "https://cdn.discordapp.com/icons/1471589904612851843/7c7b409c66149a2fe8e4db1da206fcae.webp?size=1024", status: "Working", role: "—" },
+  { name: "wSmoothie's Blender", icon: "https://cdn.discordapp.com/icons/1373123900354854932/4c6f3e65abba17d9d806b8f068703986.webp?size=1024", status: "Working", role: "Developer", description: "A mod development studio." },
+  { name: "Minecraft Design Hub", icon: "https://cdn.discordapp.com/icons/972091816004444170/f4457c7980f91b0bbbc2ecb7af0f0ecf.webp?size=1024", status: "Working", role: "Developer" },
+  { name: "MonkeySMP", icon: "https://cdn.discordapp.com/icons/1471589904612851843/7c7b409c66149a2fe8e4db1da206fcae.webp?size=1024", status: "Resigned", role: "—" },
   { name: "OceaniaMC", icon: "https://cdn.discordapp.com/icons/1493868758429733004/e5631e0f2ef2c34b6bbf5e3218825436.webp?size=1024", status: "Resigned", role: "—" },
   { name: "Purpify Host", icon: "https://cdn.discordapp.com/icons/1368671101579690018/6a8334d3df5e9e176371e153ec9d7a12.webp?size=1024", status: "Resigned", role: "Co-Founder" },
   { name: "MythMC", icon: "https://cdn.discordapp.com/icons/1299444406843215933/a5a447b547722208af9065b5fb159f29.webp?size=1024", status: "Resigned", role: "—" },
@@ -34,6 +36,7 @@ export default function ServersSection() {
                   </div>
                   <div className="min-w-0">
                     <span className="block font-medium leading-snug">{server.name}</span>
+                    {server.description && <p className="mt-1 max-w-[42ch] text-sm leading-5 text-neutral-500">{server.description}</p>}
                     {server.website && (
                       <a
                         href={server.website}
