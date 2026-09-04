@@ -33,7 +33,7 @@ export default function NotFound() {
             </Link>
 
             <a
-              href="https://discord.com/users/literal.uu"
+              href="https://discord.com/users/1179751802393079838"
               className="button-secondary"
             >
               Discord

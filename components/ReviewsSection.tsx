@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 
 const reviews = [
   { name: "JustIcyXD", text: "Great plugins, 9/10, quick speed & cooperative", avatar: "https://cdn.discordapp.com/avatars/1482323231267491881/d3c66b3f17ed09c7db5333593fd8f0fa.webp?size=1024" },
@@ -10,6 +11,17 @@ const reviews = [
   { name: "Ruby", text: "Literal was my developer and I would honestly say for customer service 5/5. Every time there was a problem or a new add literal would be really quick and do it instantly and very professionally.", avatar: "https://cdn.discordapp.com/avatars/1057059862414118982/aa2f938014f99984142a0a604a56ca26.webp?size=1024" },
   { name: "qbqmbiii", text: "Got a custom plugin built to extactly the way i wanted it and response time was reasonable and fast and the workers are very nice and know what they are doing! highly recommend", avatar: "https://cdn.discordapp.com/avatars/1356708595278020618/5eb0863afb4abf5b64f8db6445594167.webp?size=128" },
   { name: "Tokiodan", text: "Literal has made me very good plugins at a very good price and very quickly", avatar: "https://cdn.discordapp.com/avatars/1175249149441085441/cbeaf5f699d1a5f1e28251a3b73f2790.webp?size=1024" },
+  {
+    name: "wSmoothie",
+    text: "in like 3 weeks he’s done significant work on all 4 projects, additionally multiple backend repos. I ended up giving literal work to do on my projects not because he applied to be a dev, but because he reached out to me how I can fix an issue with wwaypoints. The issue itself wasn’t that big of a deal but his expertise was immediately clear in vc that he’s expecerienced in a ton of languages and use cases",
+    avatar: "https://cdn.discordapp.com/avatars/526816781029998608/2bfc5b582f36128338b03be1019d7af5.webp?size=1024",
+    href: "https://wsmoothie.com/mods",
+  },
+  {
+    name: "Seltop",
+    text: "Very good work, I hired him for a deal and he's shown that he's very experienced with everything he's doing.",
+    avatar: "https://cdn.discordapp.com/avatars/316546939481096192/a_6c6a7e54417dd7801b66ed2c931f7432.webp?size=1024&animated=true",
+  },
 ];
 
 export default function ReviewsSection() {
@@ -22,7 +34,14 @@ export default function ReviewsSection() {
             <blockquote className="max-w-[38ch] text-xl leading-8 text-neutral-200 md:text-2xl md:leading-9">“{review.text}”</blockquote>
             <figcaption className="mt-10 flex items-center gap-4">
               <Image src={review.avatar} alt="" width={40} height={40} unoptimized className="h-10 w-10 rounded-full object-cover" />
-              <span className="micro-type text-neutral-400">{review.name}</span>
+              {review.href ? (
+                <a href={review.href} target="_blank" rel="noreferrer" className="micro-type flex items-center gap-1.5 text-neutral-400 transition-colors hover:text-white">
+                  {review.name}
+                  <ArrowUpRight aria-hidden="true" size={12} />
+                </a>
+              ) : (
+                <span className="micro-type text-neutral-400">{review.name}</span>
+              )}
             </figcaption>
           </motion.figure>
         ))}

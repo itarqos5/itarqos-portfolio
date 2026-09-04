@@ -24,7 +24,7 @@ export default function Navbar() {
               {label}
             </a>
           ))}
-          <a href="https://discord.com/users/literal.uu" target="_blank" rel="noreferrer" className="button-primary !min-h-9 !px-4 !py-2">
+          <a href="https://discord.com/users/1179751802393079838" target="_blank" rel="noreferrer" className="button-primary !min-h-9 !px-4 !py-2">
             Discord
           </a>
         </div>
@@ -40,7 +40,7 @@ export default function Navbar() {
                 {label}
               </a>
             ))}
-            <a href="https://discord.com/users/literal.uu" target="_blank" rel="noreferrer" className="button-primary mt-4">Contact on Discord</a>
+            <a href="https://discord.com/users/1179751802393079838" target="_blank" rel="noreferrer" className="button-primary mt-4">Contact on Discord</a>
           </div>
         </div>
       )}

@@ -16,7 +16,7 @@ export default function HeroSection() {
             Building async TCP forwarders, Minecraft plugins, and web interfaces with Java, Rust, TypeScript, and MySQL.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <a href="https://discord.com/users/literal.uu" target="_blank" rel="noreferrer" className="button-primary">
+            <a href="https://discord.com/users/1179751802393079838" target="_blank" rel="noreferrer" className="button-primary">
               <FaDiscord aria-hidden="true" /> Contact on Discord
             </a>
             <a href="https://github.com/itarqos5" target="_blank" rel="noreferrer" className="button-secondary">
