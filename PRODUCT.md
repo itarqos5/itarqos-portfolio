@@ -32,7 +32,7 @@ Visitors scan the portfolio, inspect featured work and technical experience, fol
 ## Brand Commitments
 
 - Preserve the name “Literal,” existing profile image, projects, reviews, skills, technologies, and links.
-- The replacement visual identity is black and white, space-themed, modern, and motion-led.
+- The replacement visual identity is Minecraft-themed, using authentic Minecraft scenery, pixel typography, deep blue colors, and restrained motion. User review precedes committing and pushing.
 
 ## Evidence on Hand
 
@@ -49,3 +49,8 @@ The repository contains the profile image at `public/profile.png`, project descr
 ## Accessibility & Inclusion
 
 Support keyboard navigation, clear focus states, sufficient contrast, responsive layouts, and reduced-motion preferences.
+
+## Creator and media presentation
+
+- Feature DashPum4, Seltop, and wSmoothie in a gold testimonial section, linked to their corresponding YouTube handles as provided by the user.
+- Use an ocean-blue theme and authentic Minecraft underwater/beach films. Do not generate images or videos.

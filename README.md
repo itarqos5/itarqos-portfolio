@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Literal portfolio
 
-## Getting Started
+A Minecraft-inspired portfolio built with Next.js, React, and Framer Motion. Project, organization, review, and technology content lives in `lib/portfolio-data.ts`; the page is rendered by `components/PortfolioExperience.tsx`.
 
-First, run the development server:
+## Local preview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+The compiled preview is available at http://localhost:3000 while its background process is running. It remains available after the Codex task ends, while the computer is awake. To restart after a reboot:
+
+```powershell
+npm run build -- --webpack
+npm run start -- --hostname 127.0.0.1 --port 3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For editing with live reload, stop the preview process using its terminal or process ID, then run:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+npm run dev -- --webpack --hostname 127.0.0.1 --port 3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Webpack avoids the Turbopack compilation stall observed on this Windows workspace. Both `localhost` and `127.0.0.1` are allowed development origins. All scenery and fonts are local, so building does not require a remote font download. Existing organization and client avatars retain their original remote sources and show initials if unavailable.
 
-## Learn More
+## Assets and design
 
-To learn more about Next.js, take a look at the following resources:
+See `public/minecraft/SOURCES.md` for the official Minecraft image and font sources. Scenery is decorative; it does not represent screenshots of the featured repositories. `DESIGN.md` documents the palette, typography, layout, and motion rules.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The page includes a mobile menu, expandable client reviews, a motion toggle, OS reduced-motion support, and Discord profile copying. Production builds and ESLint are the required local checks.

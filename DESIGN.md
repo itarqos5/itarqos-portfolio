@@ -1,193 +1,189 @@
 ---
 name: Literal Portfolio
-description: A black-and-white system for presenting Literal's work as clear signals in a deep field.
+description: A developer's corner of the Minecraft Ocean.
 colors:
-  ink: "#000000"
-  paper: "#f5f5f2"
-  muted: "#a3a3a3"
-  dim: "#5f5f5f"
-  line: "rgba(255, 255, 255, 0.16)"
-  line-strong: "rgba(255, 255, 255, 0.38)"
+  ink: "#0b1726"
+  paper: "#edf5fc"
+  muted: "#a6bed2"
+  accent: "#8bd2f3"
+  line: "#2b4660"
+  inventory: "#cedfeb"
 typography:
   display:
-    fontFamily: "Barlow Condensed, sans-serif"
-    fontSize: "clamp(3.25rem, 8vw, 6rem)"
-    fontWeight: 600
-    lineHeight: 0.88
-    letterSpacing: "-0.03em"
-  title:
-    fontFamily: "Barlow Condensed, sans-serif"
-    fontSize: "clamp(2.25rem, 5vw, 3rem)"
-    fontWeight: 600
-    lineHeight: 1
-    letterSpacing: "-0.03em"
+    fontFamily: "Minecraft Ten, sans-serif"
+    fontSize: "clamp(48px, 5.45vw, 83px)"
+    fontWeight: 400
+    lineHeight: 1.16
+    letterSpacing: "-0.02em"
+  headline:
+    fontFamily: "Minecraft Ten, sans-serif"
+    fontSize: "clamp(34px, 3.5vw, 51px)"
+    fontWeight: 400
+    lineHeight: 1.16
+    letterSpacing: "-0.015em"
   body:
     fontFamily: "Geist, sans-serif"
-    fontSize: "1rem"
+    fontSize: "15px"
     fontWeight: 400
-    lineHeight: 1.75
-    letterSpacing: "normal"
   label:
-    fontFamily: "Geist Mono, monospace"
-    fontSize: "0.68rem"
+    fontFamily: "Minecraft Seven, sans-serif"
     fontWeight: 400
-    lineHeight: 1.4
-    letterSpacing: "0.12em"
 rounded:
   square: "0px"
-  circle: "9999px"
 spacing:
-  control-x: "1.2rem"
-  control-y: "0.85rem"
-  section-mobile: "6rem"
-  section: "8rem"
-  page-edge: "clamp(1.25rem, 4vw, 4rem)"
+  compact: "12px"
+  medium: "24px"
+  section: "100px"
+  section-mobile: "65px"
 components:
   button-primary:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    typography: "{typography.label}"
+    backgroundColor: "{colors.accent}"
+    textColor: "#0d1a25"
     rounded: "{rounded.square}"
-    padding: "{spacing.control-y} {spacing.control-x}"
-    height: "48px"
+    padding: "14px 21px"
+  button-primary-hover:
+    backgroundColor: "#a1cbed"
   button-secondary:
-    backgroundColor: "transparent"
+    backgroundColor: "#0b1726b0"
     textColor: "{colors.paper}"
-    typography: "{typography.label}"
     rounded: "{rounded.square}"
-    padding: "{spacing.control-y} {spacing.control-x}"
-    height: "48px"
+    padding: "14px 21px"
+  button-secondary-hover:
+    backgroundColor: "#1e3242"
 ---
 
 # Design System: Literal Portfolio
 
 ## Overview
 
-**Creative North Star: "Signals in the Dark"**
+**Creative North Star: "A developer's corner of the Overworld"**
 
-Literal's visual system places clear work, plain language, and direct actions in a deep black field. Paper-white sections interrupt that field when the content needs a firm change in pace. Hairline rules organize information without turning projects, reviews, or experience into a card grid.
+Literal's user-selected Minecraft identity combines authentic game scenery with deep deep blue fields and pale cyan accents. Large pixel lettering establishes the world; ordinary sans-serif descriptions keep the developer's work readable. Real projects, people, and links supply the content.
 
-The system is mostly square and flat. Barlow Condensed carries large names and section headings, Geist handles reading, and Geist Mono marks navigation, tags, status, and small technical labels. Circular forms belong to orbital paths, portraits, avatars, status marks, and a small number of icon controls; they are not a general container style.
+The interface is square and mostly flat. Landscape crops provide atmosphere, ruled lists organize evidence, and a pale inventory surface introduces the game's native inset material. This records the implemented Minecraft replacement; the former monochrome orbital system is superseded.
 
 **Key Characteristics:**
 
-- Pure black and warm paper-white fields with a short graphite scale.
-- Condensed uppercase display type paired with restrained sans-serif copy and mono labels.
-- One-pixel rules, open rows, and generous section spacing instead of floating cards.
-- Original-color profile, server, and review imagery with slow orbital motion.
-- Square controls with visible, high-contrast focus outlines.
+- Authentic Minecraft scenery with dark overlays for foreground text.
+- Minecraft Ten headings, Minecraft Seven short labels, and Geist reading copy.
+- Ocean fields, sea blue actions, and a pale inventory section.
+- Square imagery, open project entries, ruled records, and inset inventory slots.
+- Optional landscape motion with a system reduced-motion fallback.
 
 ## Colors
 
-The palette is strictly monochrome: hard black and warm white establish the field, while graphite tones and translucent white lines carry supporting information.
+Green-tinted neutrals connect the interface to its landscapes without competing with their original color.
 
 ### Primary
 
-- **Paper White:** The main foreground on dark fields, the fill for primary actions, and the background for light sections.
+- **Sea Blue Accent:** Primary actions, heading emphasis, hover feedback, and keyboard focus on dark fields.
 
 ### Neutral
 
-- **Deep Black:** The default page background, dark-section surface, and text color on paper-white sections.
-- **Signal Gray:** Supporting copy and secondary labels that must remain readable without competing with headings.
-- **Graphite:** Low-emphasis metadata, inactive labels, and secondary scrollbar treatment.
-- **Hairline:** Quiet dividers and section boundaries on black.
-- **Strong Hairline:** Secondary-control borders and circular geometry that needs more definition.
+- **Ocean Ink:** Page field, mobile navigation, and dark foreground against the accent.
+- **Pale Paper:** Main foreground on deep blue fields.
+- **Muted Sage:** Descriptions and secondary information.
+- **Ocean Line:** Quiet section, list, and review dividers.
+- **Pale Inventory:** The broad light toolkit field, with dark deep blue text.
 
 ### Named Rules
 
-**The Monochrome Rule.** Use black, paper white, and neutral grays only. State and hierarchy come from contrast, type, line, and motion rather than accent color.
-
-**The Paper Break Rule.** Use a full paper-white section when the reading mode changes; do not scatter small white cards across the black field.
+**The Landscape Rule.** Keep authentic scenery in its original color family and use dark overlays where text sits over it.
 
 ## Typography
 
-**Display Font:** Barlow Condensed (with sans-serif fallback)  
-**Body Font:** Geist (with sans-serif fallback)  
-**Label/Mono Font:** Geist Mono (with monospace fallback)
+**Display Font:** Minecraft Ten, with sans-serif fallback.
+**Body Font:** Locally loaded Geist, with sans-serif fallback.
+**Label Font:** Minecraft Seven, with sans-serif fallback.
 
-**Character:** Display type is narrow, uppercase, and tightly set so names and section headings can carry scale without becoming wide blocks. Body and mono faces stay plain and legible around it.
+The type ramp is deliberately discontinuous: block-shaped headings dominate, while Geist handles compact descriptions and quotes. Minecraft Seven supplies short game-like labels and the wordmark. Both Minecraft faces are locally hosted at regular weight.
 
 ### Hierarchy
 
-- **Display** (600, fluid large scale, 0.88 line-height): Section headings and other major statements; uppercase with tight tracking.
-- **Title** (600, fluid medium scale, 1 line-height): Project names, technology names, and smaller display statements.
-- **Body** (400, 1rem, 1.75 line-height): Descriptions and supporting text; keep reading measures near 56–60 characters where practical.
-- **Label** (400–600, 0.68rem, 0.12em tracking): Navigation, status, tags, and telemetry; uppercase only.
+- **Display:** The fluid hero uses the frontmatter scale. Its mobile range is 37–58px with a 1.24 line-height; its wide-screen override is 90px.
+- **Headline:** Section headings use the frontmatter scale, reducing to a 30–43px range on mobile. Accent spans maintain hierarchy inside a heading.
+- **Title:** Project names use Geist at 16px and weight 500; image titles use Minecraft Ten.
+- **Body:** The base is 15px. Main supporting paragraphs use 14px with a 1.8 line-height; reviews use 15px with a 1.85 line-height. Descriptions generally stop around 32–48 characters per line.
+- **Label:** Minecraft Seven is reserved for short labels. Final readability overrides set project tags, server metadata, inventory names, footer copy, and related small reading text to 11px.
 
 ### Named Rules
 
-**The Three-Voice Rule.** Use condensed display type for statements, Geist for reading, and Geist Mono for short labels. Do not use the mono face for paragraphs.
-
-**The Short Display Rule.** Keep large display lines brief. Their scale and tight line-height are intended for names and compact phrases.
+**The Reading Rule.** Use pixel faces for identity and short statements, and Geist for paragraphs, reviews, and detailed records.
 
 ## Layout
 
-The shared content width is 1440px. Section content is centered and uses a fluid page edge from 1.25rem to 4rem. Desktop sections have 8rem of vertical space; screens below 768px reduce this to 6rem. The main desktop pattern pairs a narrower introduction column with a wider evidence column, then collapses to one column on smaller screens.
+Main content is centered at a maximum width of 1240px with 56px desktop gutters. Navigation can extend to 1360px. At 1100px and below, both use 32px gutters; at 760px and below, gutters become 20px. Repeated sections use the desktop and mobile spacing tokens.
 
-Content is arranged as open rows, tables, and ruled grids. Dividers normally span the full width of the content they organize. Dense details such as tags and status use small gaps, while major sections and column changes use visibly larger gaps.
-
-**The Open-Row Rule.** Projects, reviews, and records sit directly in the section field and are separated by one-pixel rules. Do not wrap each item in a detached card.
+Desktop project and review groups use three columns. Experience and toolkit pair a narrower introduction with a wider content region. At the mobile breakpoint these become single columns. The finished inventory uses four columns at every width and 91px-tall slots. Mobile section introductions stack above their secondary links.
 
 ## Elevation & Depth
 
-The system is flat and uses no decorative shadows on content containers. Depth comes from the change between black and paper-white fields, fixed background stars, image cropping, overlapping orbital lines, and the navigation bar's slight transparency and blur. The only glow is the small white marker on an orbit; it is a point of light, not a general elevation effect.
+Depth comes from landscape cropping, dark gradients over imagery, subtle section color changes, and inset game controls. Content entries have no exterior card shadows. Text shadows support hero legibility and are not container elevation.
+
+### Shadow Vocabulary
+
+- **Action bevel:** `inset 0 2px #bcd1e3, inset 0 -3px #3571a2` gives primary buttons a native game-control edge.
+- **Inventory recess:** `inset 2px 2px #688ba8, inset -2px -2px #e5eef5` creates recessed item slots.
 
 ### Named Rules
 
-**The Flat Field Rule.** Surfaces stay flat. Do not add card shadows, raised panels, or soft floating containers.
+**The Inset Rule.** Keep content containers flat; reserve structural bevels for game controls and inventory slots.
 
 ## Shapes
 
-Controls, content rows, and section fields use square corners. One-pixel borders provide their edge. Circles are reserved for imagery, orbital diagrams, avatars, status marks, and compact icon controls tied to those uses. Supplied profile, server, and review imagery keeps its original color inside the monochrome interface.
-
-**The Reserved Circle Rule.** A circle must represent an orbit, a person or server image, a status point, or a compact icon action. It is not a default badge or button shape.
+Controls, portraits, tags, image crops, and inventory slots have square corners. Thin borders and small square status marks repeat the block geometry. The hero's stepped lower edge is a surface-specific silhouette rather than a mandatory section divider.
 
 ## Components
 
 ### Buttons
 
-Buttons are compact, square controls with mono uppercase labels and a one-pixel edge.
+Primary actions are sea blue-filled with an inset bevel, a 50px minimum height, and Geist labels at 13px/600. Hover lightens the fill and moves the control up 2px. Secondary buttons use a translucent deep blue fill and pale border, then a brighter deep blue fill on hover. Discord uses the primary treatment in the hero and contact section; exploration uses the secondary treatment.
 
-- **Shape:** Square corners with a minimum height of 48px.
-- **Primary:** Paper-white fill with black text and balanced compact padding.
-- **Secondary:** Transparent black-field fill, paper-white text, and a strong translucent border.
-- **Hover / Focus:** Both variants rise by 2px on hover. The secondary becomes paper white with black text. Keyboard focus uses a 2px high-contrast outline offset by 4px; the outline reverses on light sections.
+Interactive elements receive a 2px sea blue focus outline offset by 6px. On the pale toolkit field, the focus color changes to dark deep blue (`#203d54`).
 
 ### Chips
 
-- **Style:** Skill chips use a black fill, a translucent white border, paper-white mono text, and a fully circular edge because they sit on an orbital diagram.
-- **State:** Status marks use a filled black dot for current work and an outlined dot for past work. Tags outside orbital diagrams remain plain text without pill containers.
+Project tags are static square outlined labels that wrap with their content. They are metadata, not filters or buttons. Their final reading size is 11px.
 
 ### Cards / Containers
 
-- **Corner Style:** Square.
-- **Background:** Inherit the black or paper-white section field.
-- **Shadow Strategy:** None.
-- **Border:** One-pixel translucent rules separate adjacent content.
-- **Internal Padding:** Row padding follows content density; review cells use more room than table records.
+Project entries pair a landscape crop with an unboxed title, description, and tags. Hover zooms the image slightly and restores its saturation. Reviews form a ruled grid with square portraits; server records use compact ruled rows and written current/past status alongside filled or outlined squares.
 
 ### Navigation
 
-The navigation is a fixed 64px black bar with slight transparency, background blur, and a hairline bottom border. The name uses condensed display type; links use gray mono labels that turn paper white on hover. The Discord action uses the primary button. On mobile, links become full-width ruled rows beneath the bar and the primary action follows them.
+The header is a fixed deep blue bar, 84px high on desktop and 72px on mobile. Its nearly opaque background keeps navigation readable over every section. Desktop links turn sea blue on hover. Below 760px, an expanded-state menu button reveals dark full-width link rows. Selecting a link or pressing Escape closes the menu; the Discord action stays visible beside the toggle.
 
-### Editorial Row
+### Inventory
 
-Project and record links are full-width ruled rows rather than cards. A clear title leads, supporting copy stays narrower, and metadata remains small. Directional icons move only a few pixels on hover so the content remains steady.
+Languages sit in recessed square slots within a bordered tray. Inline SVG icons, text labels, and decorative slot numbers connect the tools to the game vocabulary. Slots lighten on hover. Technologies wrap below as plain text, separated from additional systems by a rule.
+
+### Motion and Disclosure
+
+The hero landscape moves from 0 to 150px and scales from 1.035 to 1.16 while scrolling through the hero. The hero clips its transformed scenery so it cannot spill over the stepped edge into the introduction. The hero uses a native 1920×1080 underwater coral scene from the Complementary Reimagined shader gallery, compressed as WebP without upscaling or additional blur. Natural underwater haze softens the scene while preserving reef detail; text and controls remain sharp. The entrance lasts 1.1 seconds; the scroll cue nudges on a 3-second cycle. The motion control disables animations and transitions, including parallax. System reduced motion also disables smooth scrolling and makes the manual motion control unavailable.
+
+Reviews initially show three entries and expand to the full data set with an expanded-state button. Discord profile copying confirms success for 2.5 seconds or presents an error with the existing contact link as fallback. Portraits fall back to name initials when images fail.
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** use black or paper-white as a full section field.
-- **Do** organize repeated content with one-pixel rules and open rows.
-- **Do** preserve profile, server, and review images in their original colors and circular crops.
-- **Do** use square controls and a 2px high-contrast focus outline with a 4px offset.
-- **Do** stop continuous motion and shorten transitions when reduced motion is requested.
+- **Do** use authentic Minecraft scenery with readable foreground contrast.
+- **Do** keep pixel type for identity and short statements, and Geist for reading.
+- **Do** use square controls, ruled records, and native inset inventory bevels.
+- **Do** preserve keyboard focus, accessible disclosure states, and reduced-motion support.
 
 ### Don't:
 
-- **Don't** introduce accent colors, gradients, or colored status semantics.
-- **Don't** turn projects, reviews, or experience into a conventional card grid.
-- **Don't** add decorative shadows to content containers.
-- **Don't** use rounded rectangles as the default control or container shape.
-- **Don't** use circular forms without an orbital, image, status, or compact-action purpose.
+- **Don't** restore the superseded monochrome orbital identity.
+- **Don't** add exterior card shadows to the flat content system.
+- **Don't** turn decorative scene labels or cramped metadata into a required pattern.
+
+Not canonized: unused hero-eyebrow styles and superseded 7–9px reading sizes remain in CSS but are not rendered system rules; the final build removes the eyebrow and overrides cramped metadata.
+
+### Creator reviews
+
+The three creator testimonials (DashPum4, Seltop, wSmoothie) live exclusively in a gold section before the general client reviews. The field is #e7cd94, ink #302713, and borders #b69a5a. Names and handles link to the user-specified YouTube channels. The longer wSmoothie quote occupies the left column on desktop; mobile follows the natural quote order. Quotes remain verbatim, with no invented ratings or audience statistics. The general review list contains the other five entries.
+
+### Minecraft films
+
+Two official Minecraft films use their matching real ocean and beach stills. A play control loads a YouTube privacy-enhanced player on demand; only one player is mounted at a time. Closing a film restores its poster. Each film retains a direct YouTube fallback. The hero links to these films. No video autoplays before the visitor asks to play it, and no generated footage is used.

@@ -1,48 +1,41 @@
 import type { Metadata } from "next";
-import { Barlow_Condensed, Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = Geist({
+const geistSans = localFont({
+  src: "../public/fonts/geist-latin.woff2",
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  display: "swap",
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const barlowCondensed = Barlow_Condensed({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
-
 export const metadata: Metadata = {
   title: "Literal — Developer & Systems Architect",
-  description: "Projects, server work, reviews, and technical experience from Literal.",
+  description:
+    "Minecraft plugins, server infrastructure, and web development. Explore Literal's projects, contributions, and client reviews.",
   openGraph: {
     title: "Literal: Developer Portfolio",
-    description: "Projects, server work, reviews, and technical experience from Literal.",
+    description:
+      "Minecraft plugins, server infrastructure, and web development.",
     images: ["/profile.png"],
   },
-  icons: {
-    icon: "/profile.png",
-  },
+  icons: { icon: "/profile.png" },
 };
-
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${barlowCondensed.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <span hidden data-design-seed="6b141d3d" aria-hidden="true" />
+        {/* THESIS: A developer's corner of the Overworld, with real work inside a recognizable Minecraft world.
+        OWN-WORLD: Ocean scenery, deep blue surfaces, pale cyan, pixel display type, square inventory controls.
+        STORY: Meet Literal, inspect projects and community work, read reviews, contact on Discord.
+        FIRST VIEWPORT: Full-bleed official scenery, centered large title, compact navigation and two clear actions.
+        FORM: User-pinned Minecraft world overrides the roll; seed 3ed3e273.
+        FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md */}
+        <span
+          hidden
+          data-design-seed="3ed3e273"
+          data-design-world="Minecraft Ocean"
+          aria-hidden="true"
+        />
         {children}
       </body>
     </html>

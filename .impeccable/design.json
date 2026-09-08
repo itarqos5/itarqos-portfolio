@@ -1,65 +1,120 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-16T15:30:00+01:00",
+  "generatedAt": "2026-09-08T20:34:20.788Z",
   "title": "Design System: Literal Portfolio",
   "extensions": {
     "colorMeta": {
       "ink": {
         "role": "neutral",
-        "displayName": "Deep Black",
-        "canonical": "#000000",
-        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+        "displayName": "Ocean Ink",
+        "canonical": "#0b1726"
       },
       "paper": {
-        "role": "primary",
-        "displayName": "Paper White",
-        "canonical": "#f5f5f2",
-        "tonalRamp": ["oklch(15% 0.003 100)", "oklch(25% 0.003 100)", "oklch(35% 0.003 100)", "oklch(47% 0.003 100)", "oklch(59% 0.003 100)", "oklch(71% 0.003 100)", "oklch(83% 0.003 100)", "oklch(95% 0.003 100)"]
+        "role": "neutral",
+        "displayName": "Pale Paper",
+        "canonical": "#edf5fc"
       },
       "muted": {
         "role": "neutral",
-        "displayName": "Signal Gray",
-        "canonical": "#a3a3a3",
-        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+        "displayName": "Muted Blue",
+        "canonical": "#a6bed2"
       },
-      "dim": {
-        "role": "neutral",
-        "displayName": "Graphite",
-        "canonical": "#5f5f5f",
-        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(35% 0 0)", "oklch(47% 0 0)", "oklch(59% 0 0)", "oklch(71% 0 0)", "oklch(83% 0 0)", "oklch(95% 0 0)"]
+      "accent": {
+        "role": "primary",
+        "displayName": "Sea Blue Accent",
+        "canonical": "#8bd2f3"
       },
       "line": {
         "role": "neutral",
-        "displayName": "Hairline",
-        "canonical": "rgba(255, 255, 255, 0.16)",
-        "tonalRamp": ["oklch(15% 0 0 / 0.16)", "oklch(25% 0 0 / 0.16)", "oklch(35% 0 0 / 0.16)", "oklch(47% 0 0 / 0.16)", "oklch(59% 0 0 / 0.16)", "oklch(71% 0 0 / 0.16)", "oklch(83% 0 0 / 0.16)", "oklch(95% 0 0 / 0.16)"]
+        "displayName": "Ocean Line",
+        "canonical": "#2b4660"
       },
-      "line-strong": {
+      "inventory": {
         "role": "neutral",
-        "displayName": "Strong Hairline",
-        "canonical": "rgba(255, 255, 255, 0.38)",
-        "tonalRamp": ["oklch(15% 0 0 / 0.38)", "oklch(25% 0 0 / 0.38)", "oklch(35% 0 0 / 0.38)", "oklch(47% 0 0 / 0.38)", "oklch(59% 0 0 / 0.38)", "oklch(71% 0 0 / 0.38)", "oklch(83% 0 0 / 0.38)", "oklch(95% 0 0 / 0.38)"]
+        "displayName": "Pale Inventory",
+        "canonical": "#cedfeb"
+      },
+      "creatorGold": {
+        "role": "accent",
+        "displayName": "Creator Gold",
+        "canonical": "#e7cd94"
+      },
+      "creatorInk": {
+        "role": "neutral",
+        "displayName": "Creator Ink",
+        "canonical": "#302713"
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Large uppercase section headings and short statements." },
-      "title": { "displayName": "Title", "purpose": "Project names, technology names, and smaller display statements." },
-      "body": { "displayName": "Body", "purpose": "Descriptions, reviews, and supporting copy." },
-      "label": { "displayName": "Label", "purpose": "Navigation, tags, status, and short technical labels." }
+      "display": {
+        "displayName": "Pixel Display",
+        "purpose": "Hero statement."
+      },
+      "headline": {
+        "displayName": "Pixel Headline",
+        "purpose": "Section headings."
+      },
+      "body": {
+        "displayName": "Reading Copy",
+        "purpose": "Descriptions and reviews."
+      },
+      "label": {
+        "displayName": "Short Pixel Labels",
+        "purpose": "Wordmark and short game-like labels."
+      }
     },
     "shadows": [
-      { "name": "orbit-marker-glow", "value": "0 0 18px rgba(255, 255, 255, 0.7)", "purpose": "Used only on the small white marker attached to an orbital line." }
+      {
+        "name": "action-bevel",
+        "value": "inset 0 2px #bcd1e3, inset 0 -3px #3571a2",
+        "purpose": "Native game-control edge for primary actions."
+      },
+      {
+        "name": "inventory-recess",
+        "value": "inset 2px 2px #688ba8, inset -2px -2px #e5eef5",
+        "purpose": "Recessed inventory slots."
+      }
     ],
     "motion": [
-      { "name": "control-state", "value": "220ms ease", "purpose": "Button background, color, and two-pixel hover movement." },
-      { "name": "orbit-turn", "value": "28s linear infinite", "purpose": "Slow continuous rotation for orbital lines." },
-      { "name": "technology-marquee", "value": "26s linear infinite", "purpose": "Continuous technology strip; pauses on hover." },
-      { "name": "reduced-motion", "value": "0.01ms 1 iteration", "purpose": "Stops continuous motion and shortens transitions when reduced motion is requested." }
+      {
+        "name": "control-transition",
+        "value": "0.2s",
+        "purpose": "Button background and hover position."
+      },
+      {
+        "name": "scene-reveal",
+        "value": "1.1s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Hero entrance from 18px lower and 2px blur."
+      },
+      {
+        "name": "project-image",
+        "value": "0.7s cubic-bezier(.16,1,.3,1)",
+        "purpose": "Project image hover zoom."
+      },
+      {
+        "name": "scroll-cue",
+        "value": "3s ease-in-out infinite",
+        "purpose": "4px arrow nudge; suppressed by motion pause and reduced motion."
+      },
+      {
+        "name": "hero-parallax",
+        "value": "translateY(0px → 150px); scale(1.035 → 1.16)",
+        "purpose": "Scroll-linked scene; suppressed by motion pause and reduced motion."
+      }
     ],
     "breakpoints": [
-      { "name": "mobile", "value": "767px" },
-      { "name": "small", "value": "640px" },
-      { "name": "large", "value": "1024px" }
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "compact-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "wide",
+        "value": "1600px"
+      }
     ]
   },
   "components": [
@@ -67,86 +122,84 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Main contact action on a black field.",
-      "html": "<a class=\"ds-button-primary\" href=\"#\">Contact on Discord</a>",
-      "css": ".ds-button-primary { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 0.7rem; padding: 0.85rem 1.2rem; border: 1px solid var(--paper, #f5f5f2); border-radius: 0; background: var(--paper, #f5f5f2); color: var(--ink, #000); font-family: var(--font-geist-mono, monospace); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background-color 220ms ease, color 220ms ease, transform 220ms ease; } .ds-button-primary:hover { transform: translateY(-2px); } .ds-button-primary:focus-visible { outline: 2px solid var(--paper, #f5f5f2); outline-offset: 4px; } .ds-button-primary:active { transform: translateY(0); }"
+      "description": "Filled Discord action with an inset game bevel.",
+      "html": "<button class=\"ds-primary\">Let’s build something</button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:14px 21px;font-family:var(--font-geist-sans,Geist),sans-serif;font-size:13px;font-weight:600;border:1px solid transparent;border-radius:0;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s;background:var(--accent,#8bd2f3);color:#0d1a25;box-shadow:inset 0 2px #bcd1e3,inset 0 -3px #3571a2}.ds-primary:hover{background:#a1cbed;transform:translateY(-2px)}.ds-primary:focus-visible{outline:2px solid var(--accent,#8bd2f3);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
     },
     {
       "name": "Secondary Button",
       "kind": "button",
       "refersTo": "button-secondary",
-      "description": "Secondary action that stays open against the black field.",
-      "html": "<a class=\"ds-button-secondary\" href=\"#\">View GitHub</a>",
-      "css": ".ds-button-secondary { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 0.7rem; padding: 0.85rem 1.2rem; border: 1px solid var(--line-strong, rgba(255,255,255,0.38)); border-radius: 0; background: transparent; color: var(--paper, #f5f5f2); font-family: var(--font-geist-mono, monospace); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background-color 220ms ease, color 220ms ease, transform 220ms ease; } .ds-button-secondary:hover { background: var(--paper, #f5f5f2); color: var(--ink, #000); transform: translateY(-2px); } .ds-button-secondary:focus-visible { outline: 2px solid var(--paper, #f5f5f2); outline-offset: 4px; } .ds-button-secondary:active { transform: translateY(0); }"
+      "description": "Outlined exploration action over deep blue scenery.",
+      "html": "<button class=\"ds-secondary\">Explore my work</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:50px;padding:14px 21px;font-family:var(--font-geist-sans,Geist),sans-serif;font-size:13px;font-weight:600;border:1px solid transparent;border-radius:0;cursor:pointer;text-decoration:none;transition:background .2s,transform .2s;background:#0b1726b0;color:var(--paper,#edf5fc);border-color:#9ab7ce66}.ds-secondary:hover{background:#1e3242}.ds-secondary:focus-visible{outline:2px solid var(--accent,#8bd2f3);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
     },
     {
-      "name": "Desktop Navigation",
+      "name": "Navigation",
       "kind": "nav",
-      "description": "Fixed black navigation with mono section links and a white contact control.",
-      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-brand\" href=\"#\">Literal</a><div class=\"ds-nav-links\"><a href=\"#\">Work</a><a href=\"#\">Reviews</a><a class=\"ds-nav-action\" href=\"#\">Discord</a></div></nav>",
-      "css": ".ds-nav { height: 64px; display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; border-bottom: 1px solid var(--line, rgba(255,255,255,0.16)); background: rgba(0,0,0,0.9); color: var(--paper, #f5f5f2); backdrop-filter: blur(12px); } .ds-nav-brand { color: inherit; font-family: var(--font-display, sans-serif); font-size: 1.25rem; font-weight: 600; letter-spacing: -0.03em; text-transform: uppercase; text-decoration: none; } .ds-nav-links { display: flex; align-items: center; gap: 2rem; } .ds-nav-links a { color: var(--muted, #a3a3a3); font-family: var(--font-geist-mono, monospace); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; } .ds-nav-links a:hover { color: var(--paper, #f5f5f2); } .ds-nav-links a:focus-visible { outline: 2px solid var(--paper, #f5f5f2); outline-offset: 4px; } .ds-nav-links .ds-nav-action { padding: 0.65rem 1rem; border: 1px solid var(--paper, #f5f5f2); background: var(--paper, #f5f5f2); color: var(--ink, #000); }"
+      "description": "Compact deep blue navigation with sea blue hover and visible focus.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"#projects\">Work</a><a href=\"#servers\">Experience</a><a href=\"#reviews\">Reviews</a><a href=\"#skills\">Toolkit</a></nav>",
+      "css": ".ds-nav{display:flex;gap:34px;padding:24px;background:#0d2033b8;font-family:var(--font-geist-sans,Geist),sans-serif}.ds-nav a{font-size:13px;color:#cad8e4;text-decoration:none;transition:color .2s}.ds-nav a:hover{color:var(--accent,#8bd2f3)}.ds-nav a:focus-visible{outline:2px solid var(--accent,#8bd2f3);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
     },
     {
-      "name": "Project Row",
-      "kind": "card",
-      "description": "Open editorial row for a project and its technical tags.",
-      "html": "<a class=\"ds-project-row\" href=\"#\"><span><strong>Vector</strong><small>An asymmetric TCP forwarder built on Netty 4 NIO.</small><em>Java · Networking · TCP</em></span><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
-      "css": ".ds-project-row { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 1.25rem; padding: 2rem 0; border-top: 1px solid var(--line, rgba(255,255,255,0.16)); border-bottom: 1px solid var(--line, rgba(255,255,255,0.16)); color: var(--paper, #f5f5f2); text-decoration: none; } .ds-project-row strong { display: block; font-family: var(--font-display, sans-serif); font-size: 3rem; line-height: 1; letter-spacing: -0.03em; text-transform: uppercase; } .ds-project-row small { display: block; max-width: 60ch; margin-top: 0.75rem; color: var(--muted, #a3a3a3); font-family: var(--font-geist-sans, sans-serif); font-size: 0.875rem; line-height: 1.5rem; } .ds-project-row em { display: block; margin-top: 1rem; color: var(--dim, #5f5f5f); font-family: var(--font-geist-mono, monospace); font-size: 0.68rem; font-style: normal; letter-spacing: 0.12em; text-transform: uppercase; } .ds-project-row svg { width: 24px; fill: none; stroke: currentColor; stroke-width: 2; transition: transform 300ms ease; } .ds-project-row:hover svg { transform: translate(4px, -4px); } .ds-project-row:focus-visible { outline: 2px solid var(--paper, #f5f5f2); outline-offset: 4px; }"
-    },
-    {
-      "name": "Review Cell",
-      "kind": "card",
-      "description": "Ruled quote cell with an original-color circular avatar and mono name.",
-      "html": "<figure class=\"ds-review\"><blockquote>“Great plugins, quick speed and cooperative.”</blockquote><figcaption><span class=\"ds-review-avatar\">L</span><span>Client name</span></figcaption></figure>",
-      "css": ".ds-review { min-height: 18rem; display: flex; flex-direction: column; justify-content: space-between; margin: 0; padding: 2.5rem; border-top: 1px solid var(--line, rgba(255,255,255,0.16)); border-bottom: 1px solid var(--line, rgba(255,255,255,0.16)); background: transparent; color: var(--paper, #f5f5f2); } .ds-review blockquote { max-width: 38ch; margin: 0; color: #e5e5e5; font-family: var(--font-geist-sans, sans-serif); font-size: 1.5rem; line-height: 1.5; } .ds-review figcaption { display: flex; align-items: center; gap: 1rem; margin-top: 2.5rem; color: var(--muted, #a3a3a3); font-family: var(--font-geist-mono, monospace); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; } .ds-review-avatar { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--line-strong, rgba(255,255,255,0.38)); border-radius: 9999px; color: var(--paper, #f5f5f2); }"
-    },
-    {
-      "name": "Status Record",
-      "kind": "custom",
-      "description": "Paper-field record with a filled or outlined status mark.",
-      "html": "<div class=\"ds-status-record\"><strong>Server name</strong><span><i></i>Working</span><span>Developer</span></div>",
-      "css": ".ds-status-record { display: grid; grid-template-columns: 1fr 140px 120px; align-items: center; gap: 0.75rem; padding: 1.25rem 0; border-top: 1px solid rgba(0,0,0,0.25); border-bottom: 1px solid rgba(0,0,0,0.25); background: var(--paper, #f5f5f2); color: var(--ink, #000); font-family: var(--font-geist-sans, sans-serif); } .ds-status-record strong { font-weight: 500; } .ds-status-record span { display: flex; align-items: center; gap: 0.5rem; color: var(--dim, #5f5f5f); font-family: var(--font-geist-mono, monospace); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; } .ds-status-record i { width: 8px; height: 8px; border-radius: 9999px; background: var(--ink, #000); }"
-    },
-    {
-      "name": "Orbital Skill Chip",
+      "name": "Project Tag",
       "kind": "chip",
-      "description": "A circular-edged label used only inside orbital diagrams.",
-      "html": "<span class=\"ds-orbit-chip\">TypeScript</span>",
-      "css": ".ds-orbit-chip { display: inline-block; padding: 0.5rem 0.75rem; border: 1px solid var(--line-strong, rgba(255,255,255,0.38)); border-radius: 9999px; background: var(--ink, #000); color: #e5e5e5; font-family: var(--font-geist-mono, monospace); font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; } .ds-orbit-chip:hover { border-color: var(--paper, #f5f5f2); color: var(--paper, #f5f5f2); } .ds-orbit-chip:focus-visible { outline: 2px solid var(--paper, #f5f5f2); outline-offset: 4px; }"
+      "description": "Static square metadata, using the final readability override.",
+      "html": "<span class=\"ds-tag\">Java</span>",
+      "css": ".ds-tag{display:inline-block;font-family:var(--font-geist-sans,Geist),sans-serif;font-size:11px;color:#a0bcd2;padding:5px 7px;border:1px solid #283c4c;border-radius:0;background:var(--ink,#0b1726)}"
+    },
+    {
+      "name": "Review Container",
+      "kind": "card",
+      "description": "Flat ruled quote container; preview omits factual review content.",
+      "html": "<figure class=\"ds-review\"><span class=\"ds-quote\" aria-hidden=\"true\">“</span><blockquote>Review text</blockquote><figcaption>Reviewer</figcaption></figure>",
+      "css": ".ds-review{margin:0;display:flex;flex-direction:column;padding:26px 28px 29px 0;border-top:1px solid var(--line,#2b4660);border-bottom:1px solid var(--line,#2b4660);background:var(--ink,#0b1726);font-family:var(--font-geist-sans,Geist),sans-serif}.ds-quote{font-family:var(--font-title,'Minecraft Ten'),sans-serif;color:var(--accent,#8bd2f3);font-size:42px;height:43px;line-height:1}.ds-review blockquote{font-size:15px;line-height:1.85;max-width:45ch;margin:0;color:#ccd9e4}.ds-review figcaption{margin-top:30px;font-size:11px;color:#95b1c8}"
+    },
+    {
+      "name": "Inventory Slot",
+      "kind": "custom",
+      "description": "Recessed square language slot with readable name and decorative number.",
+      "html": "<div class=\"ds-slot\"><span class=\"ds-number\" aria-hidden=\"true\">1</span><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16\" /></svg><span class=\"ds-language\">Java</span></div>",
+      "css": ".ds-slot{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;height:91px;min-width:0;background:#ccdbe8;color:#264661;box-shadow:inset 2px 2px #688ba8,inset -2px -2px #e5eef5;transition:background .2s;font-family:var(--font-geist-sans,Geist),sans-serif}.ds-slot:hover{background:#ebf2f7}.ds-number{position:absolute;top:5px;left:7px;font-family:var(--font-pixel,'Minecraft Seven'),sans-serif;font-size:9px;color:#4a6a85}.ds-language{font-size:11px}@media(prefers-reduced-motion:reduce){.ds-slot{transition:none}}"
     }
   ],
   "narrative": {
-    "northStar": "Signals in the Dark",
-    "overview": "Literal's visual system places clear work, plain language, and direct actions in a deep black field. Paper-white sections interrupt that field when the content needs a firm change in pace. Hairline rules organize information without turning projects, reviews, or experience into a card grid.\n\nThe system is mostly square and flat. Barlow Condensed carries large names and section headings, Geist handles reading, and Geist Mono marks navigation, tags, status, and small technical labels. Circular forms belong to orbital paths, portraits, avatars, status marks, and a small number of icon controls; they are not a general container style.",
+    "northStar": "A developer's corner of the Overworld",
+    "overview": "Literal's user-selected Minecraft identity combines authentic game scenery with deep deep blue fields and pale cyan accents. Large pixel lettering establishes the world; ordinary sans-serif descriptions keep the developer's work readable. Real projects, people, and links supply the content.\n\nThe interface is square and mostly flat. Landscape crops provide atmosphere, ruled lists organize evidence, and a pale inventory surface introduces the game's native inset material. This records the implemented Minecraft replacement; the former monochrome orbital system is superseded.",
     "keyCharacteristics": [
-      "Pure black and warm paper-white fields with a short graphite scale.",
-      "Condensed uppercase display type paired with restrained sans-serif copy and mono labels.",
-      "One-pixel rules, open rows, and generous section spacing instead of floating cards.",
-      "Original-color profile, server, and review imagery with slow orbital motion.",
-      "Square controls with visible, high-contrast focus outlines."
+      "Authentic Minecraft scenery with dark overlays for foreground text.",
+      "Minecraft Ten headings, Minecraft Seven short labels, and Geist reading copy.",
+      "Ocean fields, sea blue actions, and a pale inventory section.",
+      "Square imagery, open project entries, ruled records, and inset inventory slots.",
+      "Optional landscape motion with a system reduced-motion fallback."
     ],
     "rules": [
-      { "name": "The Monochrome Rule", "body": "Use black, paper white, and neutral grays only. State and hierarchy come from contrast, type, line, and motion rather than accent color.", "section": "colors" },
-      { "name": "The Paper Break Rule", "body": "Use a full paper-white section when the reading mode changes; do not scatter small white cards across the black field.", "section": "colors" },
-      { "name": "The Three-Voice Rule", "body": "Use condensed display type for statements, Geist for reading, and Geist Mono for short labels. Do not use the mono face for paragraphs.", "section": "typography" },
-      { "name": "The Short Display Rule", "body": "Keep large display lines brief. Their scale and tight line-height are intended for names and compact phrases.", "section": "typography" },
-      { "name": "The Open-Row Rule", "body": "Projects, reviews, and records sit directly in the section field and are separated by one-pixel rules. Do not wrap each item in a detached card.", "section": "layout" },
-      { "name": "The Flat Field Rule", "body": "Surfaces stay flat. Do not add card shadows, raised panels, or soft floating containers.", "section": "elevation" },
-      { "name": "The Reserved Circle Rule", "body": "A circle must represent an orbit, a person or server image, a status point, or a compact icon action. It is not a default badge or button shape.", "section": "shapes" }
+      {
+        "name": "The Landscape Rule",
+        "body": "Keep authentic scenery in its original color family and use dark overlays where text sits over it.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Rule",
+        "body": "Use pixel faces for identity and short statements, and Geist for paragraphs, reviews, and detailed records.",
+        "section": "typography"
+      },
+      {
+        "name": "The Inset Rule",
+        "body": "Keep content containers flat; reserve structural bevels for game controls and inventory slots.",
+        "section": "elevation"
+      }
     ],
     "dos": [
-      "Do use black or paper-white as a full section field.",
-      "Do organize repeated content with one-pixel rules and open rows.",
-      "Do preserve profile, server, and review images in their original colors and circular crops.",
-      "Do use square controls and a 2px high-contrast focus outline with a 4px offset.",
-      "Do stop continuous motion and shorten transitions when reduced motion is requested."
+      "**Do** use authentic Minecraft scenery with readable foreground contrast.",
+      "**Do** keep pixel type for identity and short statements, and Geist for reading.",
+      "**Do** use square controls, ruled records, and native inset inventory bevels.",
+      "**Do** preserve keyboard focus, accessible disclosure states, and reduced-motion support."
     ],
     "donts": [
-      "Don't introduce accent colors, gradients, or colored status semantics.",
-      "Don't turn projects, reviews, or experience into a conventional card grid.",
-      "Don't add decorative shadows to content containers.",
-      "Don't use rounded rectangles as the default control or container shape.",
-      "Don't use circular forms without an orbital, image, status, or compact-action purpose."
+      "**Don't** restore the superseded monochrome orbital identity.",
+      "**Don't** add exterior card shadows to the flat content system.",
+      "**Don't** turn decorative scene labels or cramped metadata into a required pattern."
     ]
   }
 }

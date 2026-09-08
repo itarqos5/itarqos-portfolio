@@ -2,38 +2,57 @@
 version: 1
 slug: "app-page-tsx"
 primary_target: "app/page.tsx"
-related_targets: ["components/HeroSection.tsx","components/Footer.tsx"]
+related_targets: ["components/PortfolioExperience.tsx", "app/globals.css", "app/layout.tsx", "lib/portfolio-data.ts"]
 ---
 
 # Home portfolio
 
 ## Scope and mode
 
-The homepage is an Experience surface for potential clients, employers, and open-source collaborators.
+The homepage is an Experience surface for potential clients, employers, and open-source collaborators. The user pinned Minecraft as the replacement world; seed `3ed3e273` is retained as provenance.
 
 ## Visitor job and action
 
-Visitors should understand Literal's technical range, inspect real work and feedback, and contact Literal on Discord. GitHub remains the main secondary path.
+Understand Literal's technical range, inspect projects and feedback, and contact Literal on Discord. GitHub is the main secondary path. Preserve factual content and existing destinations in `lib/portfolio-data.ts`.
 
 ## Direction
 
-The approved composition uses oversized left-set typography facing the original full-color profile image inside moving orbital paths. The close repeats Discord at large scale.
+THESIS: A developer's corner of the Overworld, with real work inside a recognizable Minecraft world.
+
+OWN-WORLD: Authentic browser-acquired Minecraft scenery, deep blue fields, pale cyan, local Minecraft Ten and Seven type, square inventory controls, and Geist body copy. No generated comp was used.
+
+STORY: Meet Literal, inspect projects and community work, read reviews, then contact on Discord.
+
+FIRST VIEWPORT: Full-bleed ocean scene, centered two-line title, compact navigation, two clear actions, scroll cue, and motion control.
+
+FORM: User-pinned Minecraft overrides the roll; seed `3ed3e273`.
 
 ## Implementation inventory
 
-- Navigation: fixed monochrome bar with plain text anchors and a white Discord control; semantic HTML.
-- Hero: Barlow Condensed headline, semantic copy and links, the original profile image, CSS orbital geometry, and canvas star field.
-- Projects: three full-width editorial rows with real repository links; semantic HTML and Framer Motion.
-- Servers: light table-like list with real remote icons and plain status text.
-- Reviews: large pull quotes with existing avatars and text.
-- Skills: concentric CSS circles, labeled language nodes, and a slow orbital path.
-- Technologies: monochrome text marquee with pause on hover and reduced-motion fallback.
-- Primary action: solid white Discord controls in the hero and a large text link in the footer.
+- Fixed deep blue navigation with desktop anchors and a mobile disclosure menu that closes on link selection or Escape.
+- Ocean hero using a native 1920×1080 Complementary Reimagined underwater gallery screenshot, with clipped scroll parallax, restrained entrance, motion pause, and system reduced-motion support.
+- Filled primary Discord action; secondary exploration action.
+- Three landscape-led project entries with real repository links; shared mod contributions below.
+- Ocean experience field with a beach crop and ruled organization records.
+- Three initially visible reviews, expandable to all reviews and collapsible again.
+- Pale toolkit section with four inventory columns at all widths, followed by technologies.
+- Landscape-backed contact section with Discord action and profile-link copy feedback.
+- Footer with original destinations and Complementary Shaders hero and Minecraft/Mojang scenery attribution.
 
 ## Component rules
 
-Corners stay square except for circular orbital elements and small status marks. Lines are one pixel. There are no decorative shadows on content containers. Display type is condensed and large; body copy uses Geist; telemetry labels use Geist Mono. Motion is slow orbit, star drift, and limited section reveal.
+Apply root `DESIGN.md`: square controls and portraits, pixel headings, Geist descriptions, flat content containers, and native inset game bevels. Main content collapses to one column at 760px. Dark overlays support text contrast. Final metadata overrides use 11px; the decorative hero eyebrow is removed.
+
+## Evidence
+
+- Source: `components/PortfolioExperience.tsx`, `app/globals.css`, `app/layout.tsx`.
+- Desktop capture: `.impeccable/screenshots/minecraft-desktop.png`.
+- Mobile capture: `.impeccable/screenshots/minecraft-mobile.png`.
 
 ## Constraints
 
-Preserve current sections, factual content, profile image, reviews, projects, server history, and links. Use black, white, and neutral grays only. Respect reduced-motion settings. Avoid invented metrics, claims, and marketing language.
+Preserve Literal's name, profile image, projects, server history, reviews, technologies, and links. Do not invent claims. Maintain keyboard access, focus visibility, reduced motion, and responsive layouts. User review precedes committing and pushing.
+
+## Ocean update and creator reviews
+
+The retained layout now uses deep ocean blues, cyan actions, and pale blue inventory surfaces. The clipped hero uses a native-resolution blue coral reef screenshot from Complementary Reimagined, with navigation fixed above the page. The hero links to two official Minecraft films with click-to-play embeds and direct links. A gold section features the three user-selected creators, each linked to their YouTube handle; the remaining five reviews stay in the general client section. Existing review wording and project facts remain unchanged.
