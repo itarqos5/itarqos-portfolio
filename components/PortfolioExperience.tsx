@@ -452,7 +452,7 @@ export default function PortfolioExperience() {
                         <i aria-hidden="true" />
                         {server.status}
                       </span>
-                      {server.role !== "—" && <small>{server.role}</small>}
+                      {server.role && <small>{server.role}</small>}
                     </div>
                   </div>
                 ))}
@@ -657,7 +657,7 @@ export default function PortfolioExperience() {
                     {activeFilm === film.id ? (
                       <iframe
                         src={`https://www.youtube-nocookie.com/embed/${film.id}?autoplay=1&rel=0&playsinline=1`}
-                        title={`Minecraft — ${film.scene}`}
+                        title={`Minecraft: ${film.scene}`}
                         allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen

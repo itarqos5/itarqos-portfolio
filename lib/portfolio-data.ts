@@ -52,7 +52,7 @@ export const servers = [
     name: "Striker's Dev Team",
     icon: "https://cdn.discordapp.com/icons/1529321742059700414/62390cb287a2f6ebb0b4df2ed453e3fd.webp?size=1024",
     status: "Working",
-    role: "—",
+    role: "",
   },
   {
     name: "wSmoothie's Blender",
@@ -71,13 +71,13 @@ export const servers = [
     name: "MonkeySMP",
     icon: "https://cdn.discordapp.com/icons/1471589904612851843/7c7b409c66149a2fe8e4db1da206fcae.webp?size=1024",
     status: "Resigned",
-    role: "—",
+    role: "",
   },
   {
     name: "OceaniaMC",
     icon: "https://cdn.discordapp.com/icons/1493868758429733004/e5631e0f2ef2c34b6bbf5e3218825436.webp?size=1024",
     status: "Resigned",
-    role: "—",
+    role: "",
   },
   {
     name: "Purpify Host",
@@ -89,13 +89,13 @@ export const servers = [
     name: "MythMC",
     icon: "https://cdn.discordapp.com/icons/1299444406843215933/a5a447b547722208af9065b5fb159f29.webp?size=1024",
     status: "Resigned",
-    role: "—",
+    role: "",
   },
   {
     name: "RyzenMC",
     icon: "https://cdn.discordapp.com/icons/1348351504071004250/76aea4d46989aa26eaa0778e1e7d5a3e.webp?size=100",
     status: "Resigned",
-    role: "—",
+    role: "",
   },
 ];
 
