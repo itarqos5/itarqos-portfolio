@@ -7,7 +7,7 @@ const geistSans = localFont({
   display: "swap",
 });
 export const metadata: Metadata = {
-  title: "Literal — Developer & Systems Architect",
+  title: "Literal: Developer & Systems Architect",
   description:
     "Minecraft plugins, server infrastructure, and web development. Explore Literal's projects, contributions, and client reviews.",
   openGraph: {
