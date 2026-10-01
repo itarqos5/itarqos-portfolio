@@ -213,16 +213,16 @@ export default function PortfolioExperience() {
 
             <div className="hero-content">
               <h1 id="hero-title">
-                A little <span>Literal.</span>
-                <br />A lot of possibility.
+                I&apos;m <span>Literal.</span>
+                <br />A developer.
               </h1>
               <p className="hero-role">
                 Full-stack developer &amp; systems architect
               </p>
               <p className="hero-description">
-                I build the systems behind the worlds.
+                I build Minecraft plugins, server infrastructure, and
                 <br />
-                Minecraft plugins, server infrastructure, and the web.
+                websites.
               </p>
               <div className="hero-actions">
                 <a href="#projects" className="button-secondary">
@@ -234,7 +234,7 @@ export default function PortfolioExperience() {
                   rel="noreferrer"
                   className="button-primary"
                 >
-                  <FaDiscord aria-hidden="true" /> Let’s build something
+                  <FaDiscord aria-hidden="true" /> Get in touch
                 </a>
               </div>
             </div>
@@ -276,13 +276,13 @@ export default function PortfolioExperience() {
               <Portrait src="/profile.png" name="Literal" size={48} />
               <div>
                 <strong>Hey, I’m Literal.</strong>
-                <span>Developer. Problem solver. World builder.</span>
+                <span>Developer working on Minecraft servers and the web.</span>
               </div>
             </div>
             <p>
-              From the first block to the last byte.
+              I work across the whole stack.
               <br />
-              <span>Java, Rust, TypeScript &amp; a little curiosity.</span>
+              <span>Mostly Java, Rust, and TypeScript.</span>
             </p>
             <a
               href={github}
@@ -302,11 +302,10 @@ export default function PortfolioExperience() {
             <div className="section-header">
               <div>
                 <h2 id="work-title">
-                  Built from the <span>blocks up.</span>
+                  My <span>projects.</span>
                 </h2>
                 <p>
-                  A few things I’ve put into the world. Open source, inside and
-                  out.
+                  A few things I’ve built. All open source.
                 </p>
               </div>
               <a
@@ -371,7 +370,7 @@ export default function PortfolioExperience() {
             </div>
             <div className="contributions">
               <div className="contributions-intro">
-                <h3>A few shared builds.</h3>
+                <h3>Mod contributions.</h3>
                 <p>Minecraft mods I helped develop.</p>
               </div>
               {contributions.map((mod) => (
@@ -401,13 +400,12 @@ export default function PortfolioExperience() {
             <div className="content-width experience-layout">
               <div className="experience-intro">
                 <h2 id="experience-title">
-                  Good worlds.
+                  Where I’ve
                   <br />
-                  <span>Great people.</span>
+                  <span>worked.</span>
                 </h2>
                 <p>
-                  The servers, studios, and communities I’ve worked with along
-                  the way.
+                  The servers, studios, and communities I’ve worked with.
                 </p>
                 <div className="experience-landscape">
                   <Image
@@ -468,12 +466,12 @@ export default function PortfolioExperience() {
               <div className="section-header">
                 <div>
                   <h2 id="creator-title">
-                    A few <span>familiar faces.</span>
+                    Creator <span>reviews.</span>
                   </h2>
-                  <p>Kind words from Minecraft creators I’ve worked with.</p>
+                  <p>Reviews from Minecraft creators I’ve worked with.</p>
                 </div>
                 <span className="creator-section-label">
-                  The golden reviews
+                  Creator reviews
                 </span>
               </div>
               <div className="creator-grid">
@@ -533,11 +531,11 @@ export default function PortfolioExperience() {
             <div className="section-header">
               <div>
                 <h2 id="reviews-title">
-                  From the other
+                  Client
                   <br />
-                  <span>side of the screen.</span>
+                  <span>reviews.</span>
                 </h2>
-                <p>Real words from the people I’ve built with.</p>
+                <p>Feedback from the people I’ve worked with.</p>
               </div>
               <span className="review-count">
                 {clientReviews.length} client reviews
@@ -590,12 +588,12 @@ export default function PortfolioExperience() {
             <div className="content-width toolkit-layout">
               <div>
                 <h2>
-                  What’s in
+                  My
                   <br />
-                  <span>my inventory.</span>
+                  <span>toolkit.</span>
                 </h2>
                 <p>
-                  The languages and tools behind the builds.
+                  The languages and tools I use.
                   <br />
                   Backend, systems, plugins, and the web.
                 </p>
@@ -641,11 +639,10 @@ export default function PortfolioExperience() {
             <div className="section-header">
               <div>
                 <h2 id="films-title">
-                  A little time <span>off the grid.</span>
+                  Minecraft <span>scenes.</span>
                 </h2>
                 <p>
-                  Sunlight through the water. A quiet stretch of shore. Take a
-                  moment in Minecraft.
+                  A few calm Minecraft videos to watch.
                 </p>
               </div>
               <span className="film-credit">Official films by Minecraft</span>
@@ -733,7 +730,7 @@ export default function PortfolioExperience() {
             <div className="contact-shade" />
             <div className="content-width contact-content">
               <h2>
-                Have a world
+                Have a project
                 <br />
                 <span>in mind?</span>
               </h2>
@@ -741,7 +738,7 @@ export default function PortfolioExperience() {
                 <p>
                   A plugin, a platform, or something in between.
                   <br />
-                  Let’s make your next idea real.
+                  Get in touch and let’s talk.
                 </p>
                 <a
                   href={discord}
@@ -774,7 +771,7 @@ export default function PortfolioExperience() {
             <a className="brand" href="#hero">
               literal<span className="brand-dot">.</span>
             </a>
-            <span>Built with care. Block by block.</span>
+            <span>Built by Literal.</span>
             <div>
               <a href={github} target="_blank" rel="noreferrer">
                 GitHub <ArrowUpRight size={14} />
